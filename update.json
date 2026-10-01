@@ -1,0 +1,5 @@
+{
+  "tag": "v4.1.0",
+  "windows_installer_url": "https://github.com/itzhaolei/quota-bubble/releases/download/v4.1.0/QuotaBubble-4.1.0-Windows-Setup.exe",
+  "macos_installer_url": "https://github.com/itzhaolei/quota-bubble/releases/download/v4.1.0/QuotaBubble-4.1.0-macOS-Installer.zip"
+}
