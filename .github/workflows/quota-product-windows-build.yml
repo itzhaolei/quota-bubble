@@ -11,6 +11,11 @@ on:
         description: Product version without the v prefix
         required: true
         type: string
+      preview_only:
+        description: Generate offline previews without building an installer
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -34,6 +39,7 @@ jobs:
     env:
       REQUESTED_SOURCE_SHA: ${{ inputs.source_sha }}
       REQUESTED_VERSION: ${{ inputs.version }}
+      QUOTA_PREVIEW_ONLY: ${{ inputs.preview_only }}
       QUOTA_LOG_PUBLIC_KEY_B64: ${{ vars.QUOTA_LOG_PUBLIC_KEY_B64 }}
     steps:
       - name: Validate maintenance request
@@ -85,13 +91,13 @@ jobs:
         working-directory: source
         run: |
           $ErrorActionPreference = 'Stop'
-          & ./scripts/validate-windows-release.ps1 -Version $env:REQUESTED_VERSION -PrivateLogs
+          & ./scripts/validate-windows-release.ps1 -Version $env:REQUESTED_VERSION -PrivateLogs -PreviewOnly:($env:QUOTA_PREVIEW_ONLY -eq 'true')
           if ($LASTEXITCODE -ne 0) {
             throw 'Windows validation failed. Consult the encrypted diagnostic artifact.'
           }
 
       - name: Upload only validated public product files
-        if: success()
+        if: success() && !inputs.preview_only
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: quota-product-windows-${{ inputs.version }}-${{ inputs.source_sha }}
@@ -101,6 +107,21 @@ jobs:
           path: |
             source/dist/QuotaBubble-${{ inputs.version }}-Windows-Setup.exe
             source/dist/QuotaBubble-${{ inputs.version }}-Windows.zip
+            source/acceptance-results/windows-ci/official-dark.png
+            source/acceptance-results/windows-ci/maple-dark.png
+            source/acceptance-results/windows-ci/other-dark.png
+            source/acceptance-results/windows-ci/maple-light.png
+            source/acceptance-results/windows-ci/manifest.json
+
+      - name: Upload offline previews only
+        if: success() && inputs.preview_only
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: quota-product-windows-previews-${{ inputs.version }}-${{ inputs.source_sha }}
+          retention-days: 3
+          if-no-files-found: error
+          include-hidden-files: false
+          path: |
             source/acceptance-results/windows-ci/official-dark.png
             source/acceptance-results/windows-ci/maple-dark.png
             source/acceptance-results/windows-ci/other-dark.png
