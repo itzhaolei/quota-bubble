@@ -1,0 +1,117 @@
+name: Quota product macOS build
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_sha:
+        description: Reviewed private-source commit (full 40-character SHA)
+        required: true
+        type: string
+      version:
+        description: Product version without the v prefix
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quota-product-macos-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build and validate the macOS product
+    if: >-
+      github.event_name == 'workflow_dispatch' &&
+      github.repository == 'itzhaolei/quota-bubble' &&
+      github.repository_owner == 'itzhaolei' &&
+      github.actor == 'itzhaolei' &&
+      github.triggering_actor == 'itzhaolei' &&
+      github.ref == 'refs/heads/main'
+    runs-on: macos-26
+    timeout-minutes: 45
+    env:
+      REQUESTED_SOURCE_SHA: ${{ inputs.source_sha }}
+      REQUESTED_VERSION: ${{ inputs.version }}
+      QUOTA_LOG_PUBLIC_KEY_B64: ${{ vars.QUOTA_LOG_PUBLIC_KEY_B64 }}
+    steps:
+      - name: Validate maintenance request
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ ! "$REQUESTED_SOURCE_SHA" =~ ^[0-9a-f]{40}$ ]]; then
+            echo 'A reviewed full source commit is required.' >&2
+            exit 1
+          fi
+          if [[ ! "$REQUESTED_VERSION" =~ ^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]]; then
+            echo 'A complete product version is required.' >&2
+            exit 1
+          fi
+          if [[ -z "$QUOTA_LOG_PUBLIC_KEY_B64" ]]; then
+            echo 'Private diagnostic encryption must be configured before building.' >&2
+            exit 1
+          fi
+
+      - name: Check out the reviewed private product source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          repository: itzhaolei/codex-usage-widget
+          ref: ${{ inputs.source_sha }}
+          path: source
+          ssh-key: ${{ secrets.QUOTA_SOURCE_READ_KEY }}
+          ssh-strict: true
+          persist-credentials: false
+          fetch-depth: 1
+          show-progress: false
+          submodules: false
+          lfs: false
+
+      - name: Verify source commit and product version
+        shell: bash
+        working-directory: source
+        run: |
+          set -euo pipefail
+          if [[ "$(git rev-parse HEAD)" != "$REQUESTED_SOURCE_SHA" ]]; then
+            echo 'The private source checkout does not match the reviewed commit.' >&2
+            exit 1
+          fi
+          python3 - <<'PY'
+          import os
+          import re
+          from pathlib import Path
+          match = re.search(r'^version:\s*([^\s+]+)(?:\+\S+)?\s*$', Path('pubspec.yaml').read_text(), re.M)
+          if match is None or match.group(1) != os.environ['REQUESTED_VERSION']:
+              raise SystemExit('The product version does not match the maintenance request.')
+          PY
+
+      - name: Build and validate without exposing private logs
+        id: validate
+        shell: bash
+        working-directory: source
+        run: |
+          set -euo pipefail
+          bash scripts/validate-macos-release.sh --version "$REQUESTED_VERSION" --private-logs
+
+      - name: Upload only validated public product files
+        if: success()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: quota-product-macos-${{ inputs.version }}-${{ inputs.source_sha }}
+          retention-days: 3
+          if-no-files-found: error
+          include-hidden-files: false
+          path: |
+            source/dist/QuotaBubble-${{ inputs.version }}-macOS.dmg
+            source/dist/QuotaBubble-${{ inputs.version }}-macOS-Installer.zip
+            source/acceptance-results/macos-ci/manifest.json
+
+      - name: Upload encrypted diagnostics only
+        if: always() && steps.validate.outcome != 'skipped'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: quota-product-macos-private-diagnostics-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 3
+          if-no-files-found: warn
+          include-hidden-files: false
+          path: source/acceptance-results/macos-ci/private-logs.enc.json

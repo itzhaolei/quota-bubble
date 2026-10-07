@@ -1,0 +1,118 @@
+name: Quota product Windows build
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_sha:
+        description: Reviewed private-source commit (full 40-character SHA)
+        required: true
+        type: string
+      version:
+        description: Product version without the v prefix
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quota-product-windows-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build and validate the Windows product
+    if: >-
+      github.event_name == 'workflow_dispatch' &&
+      github.repository == 'itzhaolei/quota-bubble' &&
+      github.repository_owner == 'itzhaolei' &&
+      github.actor == 'itzhaolei' &&
+      github.triggering_actor == 'itzhaolei' &&
+      github.ref == 'refs/heads/main'
+    runs-on: windows-2022
+    timeout-minutes: 45
+    env:
+      REQUESTED_SOURCE_SHA: ${{ inputs.source_sha }}
+      REQUESTED_VERSION: ${{ inputs.version }}
+      QUOTA_LOG_PUBLIC_KEY_B64: ${{ vars.QUOTA_LOG_PUBLIC_KEY_B64 }}
+    steps:
+      - name: Validate maintenance request
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          if ($env:REQUESTED_SOURCE_SHA -cnotmatch '^[0-9a-f]{40}$') {
+            throw 'A reviewed full source commit is required.'
+          }
+          if ($env:REQUESTED_VERSION -notmatch '^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$') {
+            throw 'A complete product version is required.'
+          }
+          if ([string]::IsNullOrWhiteSpace($env:QUOTA_LOG_PUBLIC_KEY_B64)) {
+            throw 'Private diagnostic encryption must be configured before building.'
+          }
+
+      - name: Check out the reviewed private product source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          repository: itzhaolei/codex-usage-widget
+          ref: ${{ inputs.source_sha }}
+          path: source
+          ssh-key: ${{ secrets.QUOTA_SOURCE_READ_KEY }}
+          ssh-strict: true
+          persist-credentials: false
+          fetch-depth: 1
+          show-progress: false
+          submodules: false
+          lfs: false
+
+      - name: Verify source commit and product version
+        shell: pwsh
+        working-directory: source
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $actual = (git rev-parse HEAD).Trim()
+          if ($LASTEXITCODE -ne 0 -or $actual -cne $env:REQUESTED_SOURCE_SHA) {
+            throw 'The private source checkout does not match the reviewed commit.'
+          }
+          $pubspec = Get-Content pubspec.yaml -Raw
+          if ($pubspec -notmatch '(?m)^version:\s*([^\s+]+)(?:\+\S+)?\s*$' -or
+              $Matches[1] -cne $env:REQUESTED_VERSION) {
+            throw 'The product version does not match the maintenance request.'
+          }
+
+      - name: Build and validate without exposing private logs
+        id: validate
+        shell: pwsh
+        working-directory: source
+        run: |
+          $ErrorActionPreference = 'Stop'
+          & ./scripts/validate-windows-release.ps1 -Version $env:REQUESTED_VERSION -PrivateLogs
+          if ($LASTEXITCODE -ne 0) {
+            throw 'Windows validation failed. Consult the encrypted diagnostic artifact.'
+          }
+
+      - name: Upload only validated public product files
+        if: success()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: quota-product-windows-${{ inputs.version }}-${{ inputs.source_sha }}
+          retention-days: 3
+          if-no-files-found: error
+          include-hidden-files: false
+          path: |
+            source/dist/QuotaBubble-${{ inputs.version }}-Windows-Setup.exe
+            source/dist/QuotaBubble-${{ inputs.version }}-Windows.zip
+            source/acceptance-results/windows-ci/official-dark.png
+            source/acceptance-results/windows-ci/maple-dark.png
+            source/acceptance-results/windows-ci/other-dark.png
+            source/acceptance-results/windows-ci/maple-light.png
+            source/acceptance-results/windows-ci/manifest.json
+
+      - name: Upload encrypted diagnostics only
+        if: always() && steps.validate.outcome != 'skipped'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: quota-product-windows-private-diagnostics-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 3
+          if-no-files-found: warn
+          include-hidden-files: false
+          path: source/acceptance-results/windows-ci/private-logs.enc.json
