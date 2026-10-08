@@ -1,12 +1,12 @@
 {
-  "tag": "v4.2.23",
-  "windows_installer_url": "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.23/QuotaBubble-4.2.23-Windows-Setup.exe",
-  "windows_size": 13437208,
-  "windows_sha256": "8f3c0663d5418ae3689c1bc9ef864e68847ebf49f4fd5f3b29affd3df37e744b",
-  "macos_dmg_url": "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.23/QuotaBubble-4.2.23-macOS.dmg",
-  "macos_dmg_size": 24289851,
-  "macos_dmg_sha256": "afb72aca40ab168c1cfb98b8ae04d56d1cd222e1b5e3f8ae6252d52ef6ba7bb3",
-  "macos_installer_url": "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.23/QuotaBubble-4.2.23-macOS-Installer.zip",
-  "macos_size": 21534594,
-  "macos_sha256": "5dfe74c91d70d278b4f760c4dcc1406f22102f2fd8e6bf2e54136140edf21e5d"
+  "tag": "v4.2.24",
+  "windows_installer_url": "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.24/QuotaBubble-4.2.24-Windows-Setup.exe",
+  "windows_size": 13438393,
+  "windows_sha256": "d008108004ef47614ca2e2ddd54c982c18d521d09410c9daf469f2ac043b0bfd",
+  "macos_dmg_url": "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.24/QuotaBubble-4.2.24-macOS.dmg",
+  "macos_dmg_size": 24408835,
+  "macos_dmg_sha256": "9099c00d360e4a32973285720c98a84ce01e5653f684ce99a87ddbba0be971c3",
+  "macos_installer_url": "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.24/QuotaBubble-4.2.24-macOS-Installer.zip",
+  "macos_size": 21549626,
+  "macos_sha256": "edfb80b141b6980eb095a7510e3fa1669097dde14248988812a7c2a812b32f02"
 }
