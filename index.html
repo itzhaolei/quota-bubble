@@ -441,11 +441,11 @@
     Object.entries(releaseTranslations).forEach(([code, values]) => Object.assign(translations[code], values));
 
     const fallbackRelease = {
-      tag: "v4.2.19",
-      macTag: "v4.2.19",
-      windowsTag: "v4.2.19",
-      mac: "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.19/QuotaBubble-4.2.19-macOS.dmg",
-      windows: "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.19/QuotaBubble-4.2.19-Windows-Setup.exe"
+      tag: "v4.2.20",
+      macTag: "v4.2.20",
+      windowsTag: "v4.2.20",
+      mac: "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.20/QuotaBubble-4.2.20-macOS.dmg",
+      windows: "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.20/QuotaBubble-4.2.20-Windows-Setup.exe"
     };
     let release = { ...fallbackRelease };
     const supported = Object.keys(translations);
@@ -508,6 +508,69 @@
       }
       updateDownloadUI();
     }
+
+    // Count download-button actions without changing their normal navigation.
+    const downloadStatsEndpoint = "https://sub2.maple.xin/quota-bubble/v1/downloads";
+    const countedDownloadEvents = new WeakSet();
+
+    function downloadEventId() {
+      try {
+        if (typeof crypto.randomUUID === "function") return crypto.randomUUID();
+      } catch (_) {}
+      try {
+        const bytes = crypto.getRandomValues(new Uint8Array(16));
+        bytes[6] = (bytes[6] & 15) | 64;
+        bytes[8] = (bytes[8] & 63) | 128;
+        const hex = Array.from(bytes, (byte) => byte.toString(16).padStart(2, "0"));
+        return `${hex.slice(0, 4).join("")}-${hex.slice(4, 6).join("")}-${hex.slice(6, 8).join("")}-${hex.slice(8, 10).join("")}-${hex.slice(10).join("")}`;
+      } catch (_) { return null; }
+    }
+
+    function downloadClickPlatform(link) {
+      const kind = link.id === "smartDownload" ? platformKind()
+        : link.id === "macDownload" ? "mac"
+        : link.id === "windowsDownload" ? "windows" : "other";
+      if (kind === "other") return null;
+      try {
+        const actual = new URL(link.href, location.href);
+        const expected = new URL(kind === "mac" ? release.mac : release.windows, location.href);
+        if (actual.protocol !== "https:" || actual.href !== expected.href
+          || !actual.pathname.toLowerCase().endsWith(kind === "mac" ? ".dmg" : ".exe")) return null;
+        return kind === "mac" ? "macos" : "windows";
+      } catch (_) { return null; }
+    }
+
+    function countDownloadClick(event) {
+      // Primary (including Ctrl/Cmd or keyboard) and middle clicks use separate
+      // event types. Ignore right clicks, synthetic events and redispatches.
+      if (!event.isTrusted || countedDownloadEvents.has(event)
+        || !((event.type === "click" && event.button === 0)
+          || (event.type === "auxclick" && event.button === 1))) return;
+      const platform = downloadClickPlatform(event.currentTarget);
+      if (!platform) return;
+      const eventId = downloadEventId();
+      if (!eventId) return;
+      countedDownloadEvents.add(event);
+      const body = JSON.stringify({ eventId, platform });
+      try {
+        if (navigator.sendBeacon?.(downloadStatsEndpoint,
+          new Blob([body], { type: "text/plain;charset=UTF-8" }))) return;
+      } catch (_) {}
+      try {
+        // A rejected beacon falls back once with the same event ID. Never wait
+        // for analytics before following the installer link, or retry failures.
+        fetch(downloadStatsEndpoint, {
+          method: "POST", headers: { "Content-Type": "text/plain;charset=UTF-8" },
+          body, keepalive: true, credentials: "omit"
+        }).catch(() => {});
+      } catch (_) {}
+    }
+
+    ["smartDownload", "macDownload", "windowsDownload"].forEach((id) => {
+      const link = document.getElementById(id);
+      link.addEventListener("click", countDownloadClick, { passive: true });
+      link.addEventListener("auxclick", countDownloadClick, { passive: true });
+    });
 
     async function shareSite() {
       try {
