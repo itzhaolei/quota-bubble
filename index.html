@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>额度泡泡 Quota Bubble｜Codex 配额与重置时间查看工具</title>
-  <meta id="pageDescription" name="description" content="额度泡泡是独立开发的 Codex 配额查看工具，支持 macOS 与 Windows。查看官方订阅账号的 5 小时和每周剩余额度、恢复时间、账号信息，并提供会话同步入口。">
+  <meta id="pageDescription" name="description" content="额度泡泡是独立开发的 Codex 配额查看工具，支持 macOS 与 Windows。查看官方订阅账号的 5 小时和每周剩余额度、恢复时间、账号信息，并支持一键同步会话。">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link id="canonicalLink" rel="canonical" href="https://codex.maple.xin/">
   <link rel="alternate" hreflang="zh-CN" href="https://codex.maple.xin/">
@@ -13,31 +13,31 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="额度泡泡 · Quota Bubble">
   <meta id="ogTitle" property="og:title" content="额度泡泡 Quota Bubble｜Codex 配额与重置时间查看工具">
-  <meta id="ogDescription" property="og:description" content="额度泡泡是独立开发的 Codex 配额查看工具，支持 macOS 与 Windows。查看官方订阅账号的 5 小时和每周剩余额度、恢复时间、账号信息，并提供会话同步入口。">
+  <meta id="ogDescription" property="og:description" content="额度泡泡是独立开发的 Codex 配额查看工具，支持 macOS 与 Windows。查看官方订阅账号的 5 小时和每周剩余额度、恢复时间、账号信息，并支持一键同步会话。">
   <meta id="ogUrl" property="og:url" content="https://codex.maple.xin/">
   <meta id="ogLocale" property="og:locale" content="zh_CN">
-  <meta property="og:image" content="https://codex.maple.xin/assets/quota-bubble-social.png">
+  <meta property="og:image" content="https://codex.maple.xin/assets/quota-bubble-social-plus-two.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="额度泡泡 Codex 官方订阅模式：示例账号与配额，真实组件精简展示">
+  <meta property="og:image:alt" content="额度泡泡 Codex Plus 官方订阅模式：示例账号、配额与两条重置记录，真实组件精简展示">
   <meta name="twitter:card" content="summary_large_image">
   <meta id="twitterTitle" name="twitter:title" content="额度泡泡 Quota Bubble｜Codex 配额与重置时间查看工具">
-  <meta id="twitterDescription" name="twitter:description" content="额度泡泡是独立开发的 Codex 配额查看工具，支持 macOS 与 Windows。查看官方订阅账号的 5 小时和每周剩余额度、恢复时间、账号信息，并提供会话同步入口。">
-  <meta name="twitter:image" content="https://codex.maple.xin/assets/quota-bubble-social.png">
-  <meta name="twitter:image:alt" content="额度泡泡 Codex 官方订阅模式：示例账号与配额，真实组件精简展示">
+  <meta id="twitterDescription" name="twitter:description" content="额度泡泡是独立开发的 Codex 配额查看工具，支持 macOS 与 Windows。查看官方订阅账号的 5 小时和每周剩余额度、恢复时间、账号信息，并支持一键同步会话。">
+  <meta name="twitter:image" content="https://codex.maple.xin/assets/quota-bubble-social-plus-two.png">
+  <meta name="twitter:image:alt" content="额度泡泡 Codex Plus 官方订阅模式：示例账号、配额与两条重置记录，真实组件精简展示">
   <script id="softwareMetadata" type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "额度泡泡 · Quota Bubble",
   "alternateName": "Quota Bubble",
   "url": "https://codex.maple.xin/",
-  "description": "额度泡泡是独立开发的 Codex 配额查看工具，支持 macOS 与 Windows。查看官方订阅账号的 5 小时和每周剩余额度、恢复时间、账号信息，并提供会话同步入口。",
+  "description": "额度泡泡是独立开发的 Codex 配额查看工具，支持 macOS 与 Windows。查看官方订阅账号的 5 小时和每周剩余额度、恢复时间、账号信息，并支持一键同步会话。",
   "applicationCategory": "DeveloperApplication",
   "operatingSystem": "macOS 13 or later; Windows 10 or later",
   "softwareVersion": "4.2.26",
   "inLanguage": "zh-CN",
   "isAccessibleForFree": true,
-  "screenshot": "https://codex.maple.xin/assets/quota-bubble-codex-preview.png",
+  "screenshot": "https://codex.maple.xin/assets/quota-bubble-codex-plus-two.png",
   "downloadUrl": [
     "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.26/QuotaBubble-4.2.26-macOS.dmg",
     "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.26/QuotaBubble-4.2.26-Windows-Setup.exe"
@@ -215,13 +215,15 @@
     .section-index { color: var(--green); font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; }
     h2 { margin: 8px 0 0; font-size: clamp(31px, 5vw, 52px); line-height: 1.06; letter-spacing: 0; }
     .section-lead { margin: 0; color: var(--muted); line-height: 1.7; max-width: 620px; }
-    .feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .feature-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
     .feature-card {
       min-height: 174px;
       padding: 20px;
       border: 1px solid var(--line);
       border-radius: 8px;
       background: var(--surface);
+      min-width: 0;
+      overflow-wrap: anywhere;
     }
     .feature-number { color: var(--green); font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; }
     .feature-card strong { display: block; margin: 32px 0 10px; font-size: 16px; }
@@ -364,7 +366,7 @@
           <div class="eyebrow"><span class="live-dot"></span><span data-i18n="eyebrow">查看 Codex 官方订阅配额</span></div>
           <h1 data-i18n="brandName">额度泡泡</h1>
           <div class="tagline" data-i18n="tagline">Codex 还剩多少额度？一眼就知道。</div>
-          <p class="lead" data-i18n="lead">查看 Codex 官方订阅账号的 5 小时与每周剩余额度、恢复时间和账号信息。额度泡泡支持 macOS 与 Windows，也提供网速、带宽、存储、内存和会话同步入口。</p>
+          <p class="lead" data-i18n="lead">查看 Codex 官方订阅账号的 5 小时与每周剩余额度、恢复时间和账号信息。额度泡泡支持 macOS 与 Windows，可查看网速、带宽、存储和内存，并支持一键同步会话。</p>
           <div class="actions">
             <a class="button primary" id="smartDownload" href="#platformDownloads" data-i18n="preparing">正在准备下载…</a>
             <a class="button" href="https://github.com/itzhaolei/quota-bubble/releases" data-i18n="source">版本发布</a>
@@ -379,20 +381,21 @@
         </div>
         <div class="product-stage" aria-label="Quota Bubble app preview">
           <span class="corner-label top">LIVE / CODEX</span><span class="corner-label bottom">CODEX / DEMO</span>
-          <figure class="preview-figure"><img class="widget-shot" src="/assets/quota-bubble-codex-preview.png" alt="额度泡泡 Codex 官方订阅模式：示例账号与配额，真实组件精简展示" width="1080" height="1491"><figcaption data-i18n="previewNote">示例账号与数据 · 真实组件精简展示</figcaption></figure>
+          <figure class="preview-figure"><img class="widget-shot" src="/assets/quota-bubble-codex-plus-two.png" alt="额度泡泡 Codex Plus 官方订阅模式：示例账号、配额与两条重置记录，真实组件精简展示" width="1080" height="1563"><figcaption data-i18n="previewNote">示例账号与数据 · 真实组件精简展示</figcaption></figure>
         </div>
       </section>
 
       <section class="section">
         <div class="section-heading">
-          <div><span class="section-index">01 / SYSTEM</span><h2 data-i18n="featureTitle">剩余额度与恢复时间，集中看清。</h2></div>
-          <p class="section-lead" data-i18n="featureLead">按账号实际支持情况展示配额窗口、剩余百分比、恢复倒计时、套餐与账号信息，以及可用重置额度。各订阅支持的字段可能不同。</p>
+          <div><span class="section-index">01 / SYSTEM</span><h2 data-i18n="featureTitle">五项常用操作，集中在桌面。</h2></div>
+          <p class="section-lead" data-i18n="featureLead">购卡、Maple API 与一键同步会话，常用操作集中在桌面。快捷充值与快捷兑换属于 Maple API 功能。</p>
         </div>
         <div class="feature-grid">
-          <article class="feature-card"><span class="feature-number">01</span><strong data-i18n="card1Title">安静留在后台</strong><p data-i18n="card1Text">点击关闭会隐藏窗口并暂停窗口渲染，macOS 菜单栏百分比或 Windows 托盘悬停提示仍会继续更新。</p></article>
-          <article class="feature-card"><span class="feature-number">02</span><strong data-i18n="card2Title">额度变化及时查看</strong><p data-i18n="card2Text">在桌面窗口查看当前剩余额度与恢复倒计时，也可以通过菜单栏或托盘查看配额百分比。</p></article>
-          <article class="feature-card"><span class="feature-number">03</span><strong data-i18n="card3Title">凭据留在本机</strong><p data-i18n="card3Text">使用本机现有的 Codex 登录，缓存只保存用量快照，不存储账号凭据。</p></article>
-          <article class="feature-card"><span class="feature-number">04</span><strong data-i18n="card4Title">应用内完成更新</strong><p data-i18n="card4Text">检查正式版本，并在应用内展示下载进度、完成安装和自动重启。</p></article>
+          <article class="feature-card"><span class="feature-number">01</span><strong data-i18n="card1Title">快捷购卡</strong><p data-i18n="card1Text">从应用直接打开购卡页面。</p></article>
+          <article class="feature-card"><span class="feature-number">02</span><strong data-i18n="card2Title">Maple API</strong><p data-i18n="card2Text">从应用直接打开 Maple API 页面。</p></article>
+          <article class="feature-card"><span class="feature-number">03</span><strong data-i18n="card3Title">会话同步</strong><p data-i18n="card3Text">一键同步会话，执行检查、迁移与重启。开始前请保存工作。</p></article>
+          <article class="feature-card"><span class="feature-number">04</span><strong data-i18n="card4Title">快捷充值</strong><p data-i18n="card4Text">Maple API 的快捷充值功能，可从应用直接打开充值页面。</p></article>
+          <article class="feature-card"><span class="feature-number">05</span><strong data-i18n="card5Title">快捷兑换</strong><p data-i18n="card5Text">Maple API 的快捷兑换功能，可在应用内输入兑换码并查看兑换结果。</p></article>
         </div>
       </section>
 
@@ -402,10 +405,10 @@
           <p class="section-lead" data-i18n="interfaceLead">预览使用程序真实组件，保留布局、字号和颜色。账号、配额、资源读数与在线客户端数量均为示例；展示的是用于介绍官方订阅配额的精简窗口。</p>
         </div>
         <div class="interface-grid">
-          <div class="interface-panel"><figure class="preview-figure"><img src="/assets/quota-bubble-codex-preview.png" alt="额度泡泡 Codex 官方订阅模式：示例账号与配额，真实组件精简展示" width="1080" height="1491" loading="lazy"><figcaption data-i18n="previewNote">示例账号与数据 · 真实组件精简展示</figcaption></figure></div>
+          <div class="interface-panel"><figure class="preview-figure"><img src="/assets/quota-bubble-codex-plus-two.png" alt="额度泡泡 Codex Plus 官方订阅模式：示例账号、配额与两条重置记录，真实组件精简展示" width="1080" height="1563" loading="lazy"><figcaption data-i18n="previewNote">示例账号与数据 · 真实组件精简展示</figcaption></figure></div>
           <div class="interface-panel telemetry">
             <div class="telemetry-row"><span class="telemetry-label">QUOTA</span><div class="telemetry-copy"><strong data-i18n="detail1Title">5 小时与每周配额</strong><span data-i18n="detail1Text">账号提供相应限制时显示对应配额窗口。没有 5 小时限制的账号，保留每周配额展示。</span></div></div>
-            <div class="telemetry-row"><span class="telemetry-label">GLASS</span><div class="telemetry-copy"><strong data-i18n="detail2Title">会话同步与桌面状态</strong><span data-i18n="detail2Text">保留会话同步入口，并展示网速、带宽、存储和内存等辅助信息。同步前请保存正在进行的工作。</span></div></div>
+            <div class="telemetry-row"><span class="telemetry-label">GLASS</span><div class="telemetry-copy"><strong data-i18n="detail2Title">一键同步会话与桌面状态</strong><span data-i18n="detail2Text">一键同步会话，并展示网速、带宽、存储和内存等辅助信息。同步会关闭并重启 Codex，开始前请保存正在进行的工作。</span></div></div>
             <div class="telemetry-row"><span class="telemetry-label">RESET</span><div class="telemetry-copy"><strong data-i18n="detail3Title">恢复时间与可用重置</strong><span data-i18n="detail3Text">查看额度何时恢复；手动重置仅在账号支持且有可用额度时提供，不代表所有订阅均支持。</span></div></div>
           </div>
         </div>
@@ -496,21 +499,17 @@
     "brandName": "额度泡泡",
     "help": "使用帮助",
     "seoTitle": "额度泡泡 Quota Bubble｜Codex 配额与重置时间查看工具",
-    "seoDescription": "额度泡泡是独立开发的 Codex 配额查看工具，支持 macOS 与 Windows。查看官方订阅账号的 5 小时和每周剩余额度、恢复时间、账号信息，并提供会话同步入口。",
+    "seoDescription": "额度泡泡是独立开发的 Codex 配额查看工具，支持 macOS 与 Windows。查看官方订阅账号的 5 小时和每周剩余额度、恢复时间、账号信息，并支持一键同步会话。",
     "eyebrow": "查看 Codex 官方订阅配额",
     "tagline": "Codex 还剩多少额度？一眼就知道。",
-    "lead": "查看 Codex 官方订阅账号的 5 小时与每周剩余额度、恢复时间和账号信息。额度泡泡支持 macOS 与 Windows，也提供网速、带宽、存储、内存和会话同步入口。",
-    "featureTitle": "剩余额度与恢复时间，集中看清。",
-    "featureLead": "按账号实际支持情况展示配额窗口、剩余百分比、恢复倒计时、套餐与账号信息，以及可用重置额度。各订阅支持的字段可能不同。",
-    "card2Title": "额度变化及时查看",
-    "card2Text": "在桌面窗口查看当前剩余额度与恢复倒计时，也可以通过菜单栏或托盘查看配额百分比。",
+    "lead": "查看 Codex 官方订阅账号的 5 小时与每周剩余额度、恢复时间和账号信息。额度泡泡支持 macOS 与 Windows，可查看网速、带宽、存储和内存，并支持一键同步会话。",
     "interfaceTitle": "来自真实组件的精简界面展示。",
     "interfaceLead": "预览使用程序真实组件，保留布局、字号和颜色。账号、配额、资源读数与在线客户端数量均为示例；展示的是用于介绍官方订阅配额的精简窗口。",
     "previewNote": "示例账号与数据 · 真实组件精简展示",
     "detail1Title": "5 小时与每周配额",
     "detail1Text": "账号提供相应限制时显示对应配额窗口。没有 5 小时限制的账号，保留每周配额展示。",
-    "detail2Title": "会话同步与桌面状态",
-    "detail2Text": "保留会话同步入口，并展示网速、带宽、存储和内存等辅助信息。同步前请保存正在进行的工作。",
+    "detail2Title": "一键同步会话与桌面状态",
+    "detail2Text": "一键同步会话，并展示网速、带宽、存储和内存等辅助信息。同步会关闭并重启 Codex，开始前请保存正在进行的工作。",
     "detail3Title": "恢复时间与可用重置",
     "detail3Text": "查看额度何时恢复；手动重置仅在账号支持且有可用额度时提供，不代表所有订阅均支持。",
     "shareLead": "把额度泡泡分享给每天使用 Codex 的同事或朋友，让他们在桌面直接查看剩余额度与恢复时间。",
@@ -524,27 +523,175 @@
     "brandName": "Quota Bubble",
     "help": "User guide",
     "seoTitle": "Quota Bubble | Codex quota and reset-time viewer for macOS and Windows",
-    "seoDescription": "Quota Bubble is an independent desktop tool for viewing official Codex subscription quotas, 5-hour and weekly limits, reset times and account details on macOS and Windows, with a session sync shortcut.",
+    "seoDescription": "Quota Bubble is an independent desktop tool for viewing official Codex subscription quotas, 5-hour and weekly limits, reset times and account details on macOS and Windows, with one-click session sync.",
     "eyebrow": "Quota viewer for official Codex subscriptions",
     "tagline": "How much Codex quota is left? See it at a glance.",
-    "lead": "View the remaining 5-hour and weekly quota, reset times and account details for your official Codex subscription. Available for macOS and Windows, with network speed, bandwidth, storage, memory and a session sync shortcut.",
-    "featureTitle": "Remaining quota and reset times, together.",
-    "featureLead": "See the quota windows, remaining percentages, reset countdowns, plan, account and reset credits your account provides. Available fields vary by subscription.",
-    "card2Title": "Keep quota in view",
-    "card2Text": "Check remaining quota and reset countdowns in the desktop window, or the quota percentage in the menu bar or system tray.",
+    "lead": "View the remaining 5-hour and weekly quota, reset times and account details for your official Codex subscription. Available for macOS and Windows, with network speed, bandwidth, storage, memory and one-click session sync.",
     "interfaceTitle": "A compact preview made from the real app components.",
     "interfaceLead": "This preview keeps the real layout, text sizes and colors. The account, quota, resource readings and active-client count are demo data, shown in a simplified official-subscription view.",
     "previewNote": "Demo account and data · Simplified real-component preview",
     "detail1Title": "5-hour and weekly quota",
     "detail1Text": "Displays the quota windows supported by the account. Accounts without a 5-hour limit retain the weekly quota view.",
-    "detail2Title": "Session sync and desktop status",
-    "detail2Text": "Includes a session sync shortcut, network speed, bandwidth, storage and memory. Save ongoing work before starting session sync.",
+    "detail2Title": "One-click session sync and desktop status",
+    "detail2Text": "Run one-click session sync and view network speed, bandwidth, storage and memory. Sync closes and restarts Codex; save ongoing work before starting.",
     "detail3Title": "Reset times and available reset credits",
     "detail3Text": "See when quota recovers. Manual resets require account support and an available reset credit; they are not included with every subscription.",
     "shareLead": "Share Quota Bubble with colleagues and friends who use Codex daily, so they can check remaining quota and reset times from their desktop.",
     "sharePoint2": "Chinese and English pages are available, with ten display languages to choose from.",
     "footer": "An independently developed Codex quota tool. Not an official OpenAI product."
   }
+};
+    const shortcutContent = {
+  "zh": {
+    "featureTitle": "五项常用操作，集中在桌面。",
+    "featureLead": "购卡、Maple API 与一键同步会话，常用操作集中在桌面。快捷充值与快捷兑换属于 Maple API 功能。",
+    "card1Title": "快捷购卡",
+    "card1Text": "从应用直接打开购卡页面。",
+    "card2Title": "Maple API",
+    "card2Text": "从应用直接打开 Maple API 页面。",
+    "card3Title": "会话同步",
+    "card3Text": "一键同步会话，执行检查、迁移与重启。开始前请保存工作。",
+    "card4Title": "快捷充值",
+    "card4Text": "Maple API 的快捷充值功能，可从应用直接打开充值页面。",
+    "card5Title": "快捷兑换",
+    "card5Text": "Maple API 的快捷兑换功能，可在应用内输入兑换码并查看兑换结果。"
+  },
+  "en": {
+    "featureTitle": "Five useful actions, together on your desktop.",
+    "featureLead": "Card purchase, Maple API and one-click session sync, together on your desktop. Quick Recharge and Quick Redemption are Maple API features.",
+    "card1Title": "Quick Card Purchase",
+    "card1Text": "Open the card purchase page directly from the app.",
+    "card2Title": "Maple API",
+    "card2Text": "Open the Maple API page directly from the app.",
+    "card3Title": "Session Sync",
+    "card3Text": "Run one-click session sync, including checks, migration and restart. Save your work first.",
+    "card4Title": "Quick Recharge",
+    "card4Text": "A Maple API feature that opens the recharge page directly from the app.",
+    "card5Title": "Quick Redemption",
+    "card5Text": "A Maple API feature for entering a redemption code and viewing its result inside the app."
+  },
+  "ja": {
+    "featureTitle": "よく使う5つの操作をデスクトップに。",
+    "featureLead": "カード購入、Maple API、ワンクリックのセッション同期をまとめました。クイックチャージとコード引き換えは Maple API の機能です。",
+    "card1Title": "カード購入",
+    "card1Text": "アプリからカード購入ページを直接開きます。",
+    "card2Title": "Maple API",
+    "card2Text": "アプリから Maple API ページを直接開きます。",
+    "card3Title": "セッション同期",
+    "card3Text": "ワンクリックでセッションの確認、移行、再起動を実行します。先に作業を保存してください。",
+    "card4Title": "クイックチャージ",
+    "card4Text": "Maple API の機能です。アプリからチャージページを直接開きます。",
+    "card5Title": "コード引き換え",
+    "card5Text": "Maple API の機能です。アプリ内でコードを入力し、結果を確認できます。"
+  },
+  "ko": {
+    "featureTitle": "자주 쓰는 다섯 가지 작업을 데스크톱에서.",
+    "featureLead": "카드 구매, Maple API, 원클릭 세션 동기화를 한곳에 모았습니다. 빠른 충전과 빠른 교환은 Maple API 기능입니다.",
+    "card1Title": "빠른 카드 구매",
+    "card1Text": "앱에서 카드 구매 페이지를 바로 엽니다.",
+    "card2Title": "Maple API",
+    "card2Text": "앱에서 Maple API 페이지를 바로 엽니다.",
+    "card3Title": "세션 동기화",
+    "card3Text": "한 번의 클릭으로 검사, 세션 이전, 재시작을 실행합니다. 먼저 작업을 저장하세요.",
+    "card4Title": "빠른 충전",
+    "card4Text": "Maple API 기능으로, 앱에서 충전 페이지를 바로 엽니다.",
+    "card5Title": "빠른 교환",
+    "card5Text": "Maple API 기능으로, 앱 안에서 교환 코드를 입력하고 결과를 확인합니다."
+  },
+  "de": {
+    "featureTitle": "Fünf praktische Aktionen auf dem Desktop.",
+    "featureLead": "Kartenkauf, Maple API und Sitzungssynchronisierung mit einem Klick. Schnellaufladung und Code-Einlösung sind Funktionen von Maple API.",
+    "card1Title": "Kartenkauf",
+    "card1Text": "Öffnet die Seite zum Kartenkauf direkt aus der App.",
+    "card2Title": "Maple API",
+    "card2Text": "Öffnet die Maple API-Seite direkt aus der App.",
+    "card3Title": "Sitzungen synchronisieren",
+    "card3Text": "Startet Prüfungen, Migration und Neustart mit einem Klick. Speichere zuerst deine Arbeit.",
+    "card4Title": "Schnellaufladung",
+    "card4Text": "Eine Maple API-Funktion, die die Aufladeseite direkt aus der App öffnet.",
+    "card5Title": "Code einlösen",
+    "card5Text": "Eine Maple API-Funktion zur Code-Eingabe und Ergebnisanzeige in der App."
+  },
+  "fr": {
+    "featureTitle": "Cinq actions pratiques sur votre bureau.",
+    "featureLead": "Achat de cartes, Maple API et synchronisation des sessions en un clic. La recharge et l’utilisation de codes sont des fonctions de Maple API.",
+    "card1Title": "Achat de cartes",
+    "card1Text": "Ouvre directement la page d’achat de cartes depuis l’application.",
+    "card2Title": "Maple API",
+    "card2Text": "Ouvre directement la page Maple API depuis l’application.",
+    "card3Title": "Synchroniser les sessions",
+    "card3Text": "Lance les vérifications, la migration et le redémarrage en un clic. Enregistrez votre travail avant de commencer.",
+    "card4Title": "Recharge rapide",
+    "card4Text": "Une fonction Maple API qui ouvre la page de recharge depuis l’application.",
+    "card5Title": "Utiliser un code",
+    "card5Text": "Une fonction Maple API pour saisir un code et consulter le résultat dans l’application."
+  },
+  "es": {
+    "featureTitle": "Cinco acciones útiles en tu escritorio.",
+    "featureLead": "Compra de tarjetas, Maple API y sincronización de sesiones con un clic. La recarga y el canje rápido son funciones de Maple API.",
+    "card1Title": "Comprar tarjetas",
+    "card1Text": "Abre la página de compra de tarjetas desde la aplicación.",
+    "card2Title": "Maple API",
+    "card2Text": "Abre la página de Maple API desde la aplicación.",
+    "card3Title": "Sincronizar sesiones",
+    "card3Text": "Ejecuta las comprobaciones, la migración y el reinicio con un clic. Guarda tu trabajo antes de empezar.",
+    "card4Title": "Recarga rápida",
+    "card4Text": "Una función de Maple API que abre la página de recarga desde la aplicación.",
+    "card5Title": "Canje rápido",
+    "card5Text": "Una función de Maple API para introducir un código y ver el resultado en la aplicación."
+  },
+  "pt": {
+    "featureTitle": "Cinco ações úteis no seu desktop.",
+    "featureLead": "Compra de cartões, Maple API e sincronização de sessões com um clique. Recarga e resgate rápidos são funções do Maple API.",
+    "card1Title": "Comprar cartões",
+    "card1Text": "Abre a página de compra de cartões diretamente no aplicativo.",
+    "card2Title": "Maple API",
+    "card2Text": "Abre a página Maple API diretamente no aplicativo.",
+    "card3Title": "Sincronizar sessões",
+    "card3Text": "Executa verificações, migração e reinício com um clique. Salve seu trabalho antes de começar.",
+    "card4Title": "Recarga rápida",
+    "card4Text": "Uma função do Maple API que abre a página de recarga pelo aplicativo.",
+    "card5Title": "Resgate rápido",
+    "card5Text": "Uma função do Maple API para inserir um código e ver o resultado no aplicativo."
+  },
+  "it": {
+    "featureTitle": "Cinque azioni utili sul desktop.",
+    "featureLead": "Acquisto di carte, Maple API e sincronizzazione delle sessioni con un clic. Ricarica e riscatto rapido sono funzioni di Maple API.",
+    "card1Title": "Acquisto carte",
+    "card1Text": "Apre la pagina di acquisto delle carte dall’app.",
+    "card2Title": "Maple API",
+    "card2Text": "Apre la pagina Maple API dall’app.",
+    "card3Title": "Sincronizza sessioni",
+    "card3Text": "Esegue controlli, migrazione e riavvio con un clic. Salva il lavoro prima di iniziare.",
+    "card4Title": "Ricarica rapida",
+    "card4Text": "Una funzione Maple API che apre la pagina di ricarica dall’app.",
+    "card5Title": "Riscatto rapido",
+    "card5Text": "Una funzione Maple API per inserire un codice e vedere il risultato nell’app."
+  },
+  "nl": {
+    "featureTitle": "Vijf handige acties op je desktop.",
+    "featureLead": "Kaarten kopen, Maple API en sessies synchroniseren met één klik. Snel opwaarderen en codes inwisselen zijn Maple API-functies.",
+    "card1Title": "Kaarten kopen",
+    "card1Text": "Opent de pagina voor kaartenaankoop vanuit de app.",
+    "card2Title": "Maple API",
+    "card2Text": "Opent de Maple API-pagina vanuit de app.",
+    "card3Title": "Sessies synchroniseren",
+    "card3Text": "Voert controles, migratie en herstart uit met één klik. Sla eerst je werk op.",
+    "card4Title": "Snel opwaarderen",
+    "card4Text": "Een Maple API-functie die de opwaardeerpagina vanuit de app opent.",
+    "card5Title": "Code inwisselen",
+    "card5Text": "Een Maple API-functie om een code in te voeren en het resultaat in de app te bekijken."
+  }
+};
+    const sessionSyncCopy = {
+  "ja": "ワンクリックでセッションを同期できます。",
+  "ko": "원클릭 세션 동기화를 지원합니다.",
+  "de": "Unterstützt Sitzungssynchronisierung mit einem Klick.",
+  "fr": "Synchronise les sessions en un clic.",
+  "es": "Sincroniza sesiones con un clic.",
+  "pt": "Sincroniza sessões com um clique.",
+  "it": "Sincronizza le sessioni con un clic.",
+  "nl": "Synchroniseert sessies met één klik."
 };
     const languageSharingCopy = {
   "ja": "中国語と英語のページがあり、表示言語は10言語から選べます。",
@@ -559,9 +706,11 @@
     Object.entries(translations).forEach(([code, values]) => Object.assign(values, {
       brandName: "Quota Bubble", help: "User guide",
       previewNote: "Demo account and data · Simplified real-component preview",
-      seoTitle: "Quota Bubble | " + values.eyebrow, seoDescription: values.lead,
+      seoTitle: "Quota Bubble | " + values.eyebrow,
+      seoDescription: values.lead + (sessionSyncCopy[code] ? " " + sessionSyncCopy[code] : ""),
+      lead: values.lead + (sessionSyncCopy[code] ? " " + sessionSyncCopy[code] : ""),
       sharePoint2: languageSharingCopy[code] || values.sharePoint2
-    }, websiteContent[code] || {}));
+    }, websiteContent[code] || {}, shortcutContent[code]));
 
     const fallbackRelease = {
       "tag": "v4.2.26",
