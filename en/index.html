@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Quota Bubble | Codex quota and reset-time viewer for macOS and Windows</title>
-  <meta id="pageDescription" name="description" content="Quota Bubble is an independent desktop tool for viewing official Codex subscription quotas, 5-hour and weekly limits, reset times and account details on macOS and Windows, with one-click session sync.">
+  <meta id="pageDescription" name="description" content="Quota Bubble is an independent Codex quota viewer for macOS and Windows. It shows official subscription quotas, 5-hour and weekly limits, reset times and account details, with one-click session sync.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link id="canonicalLink" rel="canonical" href="https://codex.maple.xin/en/">
   <link rel="alternate" hreflang="zh-CN" href="https://codex.maple.xin/">
@@ -13,42 +13,50 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="额度泡泡 · Quota Bubble">
   <meta id="ogTitle" property="og:title" content="Quota Bubble | Codex quota and reset-time viewer for macOS and Windows">
-  <meta id="ogDescription" property="og:description" content="Quota Bubble is an independent desktop tool for viewing official Codex subscription quotas, 5-hour and weekly limits, reset times and account details on macOS and Windows, with one-click session sync.">
+  <meta id="ogDescription" property="og:description" content="Quota Bubble is an independent Codex quota viewer for macOS and Windows. It shows official subscription quotas, 5-hour and weekly limits, reset times and account details, with one-click session sync.">
   <meta id="ogUrl" property="og:url" content="https://codex.maple.xin/en/">
   <meta id="ogLocale" property="og:locale" content="en_US">
-  <meta property="og:image" content="https://codex.maple.xin/assets/quota-bubble-social-plus-two.png">
+  <meta property="og:image" content="https://codex.maple.xin/assets/quota-bubble-social-plus-two-actions.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="额度泡泡 Codex Plus 官方订阅模式：示例账号、配额与两条重置记录，真实组件精简展示">
+  <meta property="og:image:alt" content="额度泡泡 Codex Plus 订阅示例：两条重置记录与五项快捷功能，真实组件精简展示">
   <meta name="twitter:card" content="summary_large_image">
   <meta id="twitterTitle" name="twitter:title" content="Quota Bubble | Codex quota and reset-time viewer for macOS and Windows">
-  <meta id="twitterDescription" name="twitter:description" content="Quota Bubble is an independent desktop tool for viewing official Codex subscription quotas, 5-hour and weekly limits, reset times and account details on macOS and Windows, with one-click session sync.">
-  <meta name="twitter:image" content="https://codex.maple.xin/assets/quota-bubble-social-plus-two.png">
-  <meta name="twitter:image:alt" content="额度泡泡 Codex Plus 官方订阅模式：示例账号、配额与两条重置记录，真实组件精简展示">
+  <meta id="twitterDescription" name="twitter:description" content="Quota Bubble is an independent Codex quota viewer for macOS and Windows. It shows official subscription quotas, 5-hour and weekly limits, reset times and account details, with one-click session sync.">
+  <meta name="twitter:image" content="https://codex.maple.xin/assets/quota-bubble-social-plus-two-actions.png">
+  <meta name="twitter:image:alt" content="额度泡泡 Codex Plus 订阅示例：两条重置记录与五项快捷功能，真实组件精简展示">
   <script id="softwareMetadata" type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
+  "@id": "https://codex.maple.xin/#software",
   "name": "额度泡泡 · Quota Bubble",
   "alternateName": "Quota Bubble",
   "url": "https://codex.maple.xin/en/",
-  "description": "Quota Bubble is an independent desktop tool for viewing official Codex subscription quotas, 5-hour and weekly limits, reset times and account details on macOS and Windows, with one-click session sync.",
+  "description": "Quota Bubble is an independent Codex quota viewer for macOS and Windows. It shows official subscription quotas, 5-hour and weekly limits, reset times and account details, with one-click session sync.",
   "applicationCategory": "DeveloperApplication",
   "operatingSystem": "macOS 13 or later; Windows 10 or later",
   "softwareVersion": "4.2.26",
   "inLanguage": "en",
   "isAccessibleForFree": true,
-  "screenshot": "https://codex.maple.xin/assets/quota-bubble-codex-plus-two.png",
+  "screenshot": "https://codex.maple.xin/assets/quota-bubble-codex-plus-two-actions.png",
   "downloadUrl": [
     "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.26/QuotaBubble-4.2.26-macOS.dmg",
     "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.26/QuotaBubble-4.2.26-Windows-Setup.exe"
+  ],
+  "sameAs": [
+    "https://github.com/itzhaolei/quota-bubble"
   ]
 }</script>
   <script id="websiteMetadata" type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": "https://codex.maple.xin/#website",
   "url": "https://codex.maple.xin/",
   "name": "额度泡泡",
-  "alternateName": "Quota Bubble"
+  "alternateName": "Quota Bubble",
+  "about": {
+    "@id": "https://codex.maple.xin/#software"
+  }
 }</script>
   <link rel="icon" href="/assets/icon.png?v=20260926-4">
   <style>
@@ -151,6 +159,7 @@
     .live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 16px rgba(0, 239, 38, 0.72); }
     h1 { margin: 16px 0 0; font-size: clamp(52px, 8vw, 88px); line-height: 0.98; letter-spacing: 0; }
     .tagline { margin: 18px 0 0; font-size: clamp(22px, 3vw, 32px); line-height: 1.18; font-weight: 720; max-width: 620px; overflow-wrap: anywhere; }
+    .brand-definition { margin: 14px 0 0; color: var(--text); font-size: 15px; line-height: 1.6; max-width: 600px; overflow-wrap: anywhere; }
     .lead { margin: 18px 0 28px; color: var(--muted); font-size: 17px; line-height: 1.7; max-width: 610px; overflow-wrap: anywhere; }
     .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
     .button {
@@ -365,6 +374,7 @@
         <div>
           <div class="eyebrow"><span class="live-dot"></span><span data-i18n="eyebrow">Quota viewer for official Codex subscriptions</span></div>
           <h1 data-i18n="brandName">Quota Bubble</h1>
+          <p class="brand-definition" data-i18n="brandDefinition">Quota Bubble is an independently developed Codex quota viewer for macOS and Windows.</p>
           <div class="tagline" data-i18n="tagline">How much Codex quota is left? See it at a glance.</div>
           <p class="lead" data-i18n="lead">View the remaining 5-hour and weekly quota, reset times and account details for your official Codex subscription. Available for macOS and Windows, with network speed, bandwidth, storage, memory and one-click session sync.</p>
           <div class="actions">
@@ -381,14 +391,14 @@
         </div>
         <div class="product-stage" aria-label="Quota Bubble app preview">
           <span class="corner-label top">LIVE / CODEX</span><span class="corner-label bottom">CODEX / DEMO</span>
-          <figure class="preview-figure"><img class="widget-shot" src="/assets/quota-bubble-codex-plus-two.png" alt="Quota Bubble Codex Plus subscription demo with a sample account, quota and two reset records, using simplified real app components" width="1080" height="1563"><figcaption data-i18n="previewNote">Demo account and data · Simplified real-component preview</figcaption></figure>
+          <figure class="preview-figure"><img class="widget-shot" src="/assets/quota-bubble-codex-plus-two-actions.png" alt="Quota Bubble Codex Plus demo with two reset records and all five shortcuts, using simplified real app components" width="1080" height="1713"><figcaption data-i18n="previewNote">Demo account and data · Simplified real-component preview · Shortcut availability depends on configuration</figcaption></figure>
         </div>
       </section>
 
       <section class="section">
         <div class="section-heading">
           <div><span class="section-index">01 / SYSTEM</span><h2 data-i18n="featureTitle">Five useful actions, together on your desktop.</h2></div>
-          <p class="section-lead" data-i18n="featureLead">Card purchase, Maple API and one-click session sync, together on your desktop. Quick Recharge and Quick Redemption are Maple API features.</p>
+          <p class="section-lead" data-i18n="featureLead">Quick Card Purchase, Maple API, Session Sync, Quick Recharge and Quick Redemption, together on your desktop. Quick Recharge and Quick Redemption are Maple API features.</p>
         </div>
         <div class="feature-grid">
           <article class="feature-card"><span class="feature-number">01</span><strong data-i18n="card1Title">Quick Card Purchase</strong><p data-i18n="card1Text">Open the card purchase page directly from the app.</p></article>
@@ -405,7 +415,7 @@
           <p class="section-lead" data-i18n="interfaceLead">This preview keeps the real layout, text sizes and colors. The account, quota, resource readings and active-client count are demo data, shown in a simplified official-subscription view.</p>
         </div>
         <div class="interface-grid">
-          <div class="interface-panel"><figure class="preview-figure"><img src="/assets/quota-bubble-codex-plus-two.png" alt="Quota Bubble Codex Plus subscription demo with a sample account, quota and two reset records, using simplified real app components" width="1080" height="1563" loading="lazy"><figcaption data-i18n="previewNote">Demo account and data · Simplified real-component preview</figcaption></figure></div>
+          <div class="interface-panel"><figure class="preview-figure"><img src="/assets/quota-bubble-codex-plus-two-actions.png" alt="Quota Bubble Codex Plus demo with two reset records and all five shortcuts, using simplified real app components" width="1080" height="1713" loading="lazy"><figcaption data-i18n="previewNote">Demo account and data · Simplified real-component preview · Shortcut availability depends on configuration</figcaption></figure></div>
           <div class="interface-panel telemetry">
             <div class="telemetry-row"><span class="telemetry-label">QUOTA</span><div class="telemetry-copy"><strong data-i18n="detail1Title">5-hour and weekly quota</strong><span data-i18n="detail1Text">Displays the quota windows supported by the account. Accounts without a 5-hour limit retain the weekly quota view.</span></div></div>
             <div class="telemetry-row"><span class="telemetry-label">GLASS</span><div class="telemetry-copy"><strong data-i18n="detail2Title">One-click session sync and desktop status</strong><span data-i18n="detail2Text">Run one-click session sync and view network speed, bandwidth, storage and memory. Sync closes and restarts Codex; save ongoing work before starting.</span></div></div>
@@ -499,13 +509,14 @@
     "brandName": "额度泡泡",
     "help": "使用帮助",
     "seoTitle": "额度泡泡 Quota Bubble｜Codex 配额与重置时间查看工具",
-    "seoDescription": "额度泡泡是独立开发的 Codex 配额查看工具，支持 macOS 与 Windows。查看官方订阅账号的 5 小时和每周剩余额度、恢复时间、账号信息，并支持一键同步会话。",
+    "seoDescription": "额度泡泡（Quota Bubble）是独立开发的 Codex 配额查看工具，支持 macOS 与 Windows。查看官方订阅账号的 5 小时和每周剩余额度、恢复时间、账号信息，并支持一键同步会话。",
+    "brandDefinition": "额度泡泡（Quota Bubble）是独立开发的 Codex 配额查看工具，支持 macOS 与 Windows。",
     "eyebrow": "查看 Codex 官方订阅配额",
     "tagline": "Codex 还剩多少额度？一眼就知道。",
     "lead": "查看 Codex 官方订阅账号的 5 小时与每周剩余额度、恢复时间和账号信息。额度泡泡支持 macOS 与 Windows，可查看网速、带宽、存储和内存，并支持一键同步会话。",
     "interfaceTitle": "来自真实组件的精简界面展示。",
     "interfaceLead": "预览使用程序真实组件，保留布局、字号和颜色。账号、配额、资源读数与在线客户端数量均为示例；展示的是用于介绍官方订阅配额的精简窗口。",
-    "previewNote": "示例账号与数据 · 真实组件精简展示",
+    "previewNote": "示例账号与数据 · 真实组件精简展示 · 快捷功能可用项随配置变化",
     "detail1Title": "5 小时与每周配额",
     "detail1Text": "账号提供相应限制时显示对应配额窗口。没有 5 小时限制的账号，保留每周配额展示。",
     "detail2Title": "一键同步会话与桌面状态",
@@ -523,13 +534,14 @@
     "brandName": "Quota Bubble",
     "help": "User guide",
     "seoTitle": "Quota Bubble | Codex quota and reset-time viewer for macOS and Windows",
-    "seoDescription": "Quota Bubble is an independent desktop tool for viewing official Codex subscription quotas, 5-hour and weekly limits, reset times and account details on macOS and Windows, with one-click session sync.",
+    "seoDescription": "Quota Bubble is an independent Codex quota viewer for macOS and Windows. It shows official subscription quotas, 5-hour and weekly limits, reset times and account details, with one-click session sync.",
+    "brandDefinition": "Quota Bubble is an independently developed Codex quota viewer for macOS and Windows.",
     "eyebrow": "Quota viewer for official Codex subscriptions",
     "tagline": "How much Codex quota is left? See it at a glance.",
     "lead": "View the remaining 5-hour and weekly quota, reset times and account details for your official Codex subscription. Available for macOS and Windows, with network speed, bandwidth, storage, memory and one-click session sync.",
     "interfaceTitle": "A compact preview made from the real app components.",
     "interfaceLead": "This preview keeps the real layout, text sizes and colors. The account, quota, resource readings and active-client count are demo data, shown in a simplified official-subscription view.",
-    "previewNote": "Demo account and data · Simplified real-component preview",
+    "previewNote": "Demo account and data · Simplified real-component preview · Shortcut availability depends on configuration",
     "detail1Title": "5-hour and weekly quota",
     "detail1Text": "Displays the quota windows supported by the account. Accounts without a 5-hour limit retain the weekly quota view.",
     "detail2Title": "One-click session sync and desktop status",
@@ -544,7 +556,7 @@
     const shortcutContent = {
   "zh": {
     "featureTitle": "五项常用操作，集中在桌面。",
-    "featureLead": "购卡、Maple API 与一键同步会话，常用操作集中在桌面。快捷充值与快捷兑换属于 Maple API 功能。",
+    "featureLead": "快捷购卡、Maple API、会话同步、快捷充值与快捷兑换，常用操作集中在桌面。快捷充值与快捷兑换属于 Maple API 功能。",
     "card1Title": "快捷购卡",
     "card1Text": "从应用直接打开购卡页面。",
     "card2Title": "Maple API",
@@ -558,7 +570,7 @@
   },
   "en": {
     "featureTitle": "Five useful actions, together on your desktop.",
-    "featureLead": "Card purchase, Maple API and one-click session sync, together on your desktop. Quick Recharge and Quick Redemption are Maple API features.",
+    "featureLead": "Quick Card Purchase, Maple API, Session Sync, Quick Recharge and Quick Redemption, together on your desktop. Quick Recharge and Quick Redemption are Maple API features.",
     "card1Title": "Quick Card Purchase",
     "card1Text": "Open the card purchase page directly from the app.",
     "card2Title": "Maple API",
@@ -693,6 +705,16 @@
   "it": "Sincronizza le sessioni con un clic.",
   "nl": "Synchroniseert sessies met één klik."
 };
+    const brandDefinitionCopy = {
+  "ja": "Quota Bubble は、macOS と Windows に対応した独立開発の Codex クォータ確認ツールです。",
+  "ko": "Quota Bubble은 macOS와 Windows를 지원하는 독립 개발 Codex 할당량 확인 도구입니다.",
+  "de": "Quota Bubble ist ein unabhängig entwickeltes Tool zur Anzeige des Codex-Kontingents für macOS und Windows.",
+  "fr": "Quota Bubble est un outil indépendant de suivi des quotas Codex pour macOS et Windows.",
+  "es": "Quota Bubble es una herramienta independiente para consultar la cuota de Codex en macOS y Windows.",
+  "pt": "Quota Bubble é uma ferramenta independente para consultar a cota do Codex no macOS e no Windows.",
+  "it": "Quota Bubble è uno strumento indipendente per visualizzare la quota Codex su macOS e Windows.",
+  "nl": "Quota Bubble is een onafhankelijk ontwikkelde Codex-quotaviewer voor macOS en Windows."
+};
     const languageSharingCopy = {
   "ja": "中国語と英語のページがあり、表示言語は10言語から選べます。",
   "ko": "중국어와 영어 페이지를 제공하며, 표시 언어는 10개 중에서 선택할 수 있습니다.",
@@ -705,6 +727,7 @@
 };
     Object.entries(translations).forEach(([code, values]) => Object.assign(values, {
       brandName: "Quota Bubble", help: "User guide",
+      brandDefinition: brandDefinitionCopy[code] || websiteContent.en.brandDefinition,
       previewNote: "Demo account and data · Simplified real-component preview",
       seoTitle: "Quota Bubble | " + values.eyebrow,
       seoDescription: values.lead + (sessionSyncCopy[code] ? " " + sessionSyncCopy[code] : ""),
