@@ -35,13 +35,13 @@
   "description": "额度泡泡（Quota Bubble）是独立开发的 Codex 配额查看工具，支持 macOS 与 Windows。查看官方订阅账号的 5 小时和每周剩余额度、恢复时间、账号信息，并支持一键同步会话。",
   "applicationCategory": "DeveloperApplication",
   "operatingSystem": "macOS 13 or later; Windows 10 or later",
-  "softwareVersion": "4.2.42",
+  "softwareVersion": "4.2.44",
   "inLanguage": "zh-CN",
   "isAccessibleForFree": true,
   "screenshot": "https://codex.maple.xin/assets/quota-bubble-codex-plus-two-actions.png",
   "downloadUrl": [
-    "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.42/QuotaBubble-4.2.42-macOS.dmg",
-    "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.42/QuotaBubble-4.2.42-Windows-Setup.exe"
+    "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.44/QuotaBubble-4.2.44-macOS.dmg",
+    "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.44/QuotaBubble-4.2.44-Windows-Setup.exe"
   ],
   "sameAs": [
     "https://github.com/itzhaolei/quota-bubble"
@@ -453,8 +453,8 @@
           <p class="section-lead" data-i18n="installLead">不需要终端，也不再跳转 Release 页面。主下载按钮自动识别系统，下方按钮始终直接下载最新图形安装器。</p>
         </div>
         <div class="download-grid">
-          <article class="download-card"><span class="platform">macOS 13+</span><h3>Quota Bubble for macOS</h3><p data-i18n="macText">适用于 macOS 13 及以上，支持 Apple 芯片和 Intel。打开 DMG，将 Quota Bubble 拖入“应用程序”，再启动应用。</p><a class="button primary platform-download" id="macDownload" href="https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.42/QuotaBubble-4.2.42-macOS.dmg" data-i18n="downloadMac">下载 macOS 版</a><div class="release-tag" id="macReleaseTag">Latest release</div></article>
-          <article class="download-card"><span class="platform">Windows 10+</span><h3>Quota Bubble for Windows</h3><p data-i18n="windowsText">适用于 Windows 10 及以上。下载并运行 Setup 安装向导，按提示安装后从桌面快捷方式启动。</p><a class="button primary platform-download" id="windowsDownload" href="https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.42/QuotaBubble-4.2.42-Windows-Setup.exe" data-i18n="downloadWindows">下载 Windows 版</a><div class="release-tag" id="windowsReleaseTag">Latest release</div></article>
+          <article class="download-card"><span class="platform">macOS 13+</span><h3>Quota Bubble for macOS</h3><p data-i18n="macText">适用于 macOS 13 及以上，支持 Apple 芯片和 Intel。打开 DMG，将 Quota Bubble 拖入“应用程序”，再启动应用。</p><a class="button primary platform-download" id="macDownload" href="https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.44/QuotaBubble-4.2.44-macOS.dmg" data-i18n="downloadMac">下载 macOS 版</a><div class="release-tag" id="macReleaseTag">Latest release</div></article>
+          <article class="download-card"><span class="platform">Windows 10+</span><h3>Quota Bubble for Windows</h3><p data-i18n="windowsText">适用于 Windows 10 及以上。下载并运行 Setup 安装向导，按提示安装后从桌面快捷方式启动。</p><a class="button primary platform-download" id="windowsDownload" href="https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.44/QuotaBubble-4.2.44-Windows-Setup.exe" data-i18n="downloadWindows">下载 Windows 版</a><div class="release-tag" id="windowsReleaseTag">Latest release</div></article>
         </div>
       </section>
     </main>
@@ -736,11 +736,11 @@
     }, websiteContent[code] || {}, shortcutContent[code]));
 
     const fallbackRelease = {
-      "tag": "v4.2.42",
-      "macTag": "v4.2.42",
-      "windowsTag": "v4.2.42",
-      "mac": "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.42/QuotaBubble-4.2.42-macOS.dmg",
-      "windows": "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.42/QuotaBubble-4.2.42-Windows-Setup.exe"
+      "tag": "v4.2.44",
+      "macTag": "v4.2.44",
+      "windowsTag": "v4.2.44",
+      "mac": "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.44/QuotaBubble-4.2.44-macOS.dmg",
+      "windows": "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.44/QuotaBubble-4.2.44-Windows-Setup.exe"
     };
     let release = { ...fallbackRelease };
     const supported = Object.keys(translations);
