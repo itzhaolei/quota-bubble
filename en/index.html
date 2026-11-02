@@ -35,13 +35,13 @@
   "description": "Quota Bubble is an independent Codex quota viewer for macOS and Windows. It shows official subscription quotas, 5-hour and weekly limits, reset times and account details, with one-click session sync.",
   "applicationCategory": "DeveloperApplication",
   "operatingSystem": "macOS 13 or later; Windows 10 or later",
-  "softwareVersion": "4.2.51",
+  "softwareVersion": "4.2.52",
   "inLanguage": "en",
   "isAccessibleForFree": true,
   "screenshot": "https://codex.maple.xin/assets/quota-bubble-codex-plus-two-actions.png",
   "downloadUrl": [
-    "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.51/QuotaBubble-4.2.51-macOS.dmg",
-    "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.51/QuotaBubble-4.2.51-Windows-Setup.exe"
+    "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.52/QuotaBubble-4.2.52-macOS.dmg",
+    "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.52/QuotaBubble-4.2.52-Windows-Setup.exe"
   ],
   "sameAs": [
     "https://github.com/itzhaolei/quota-bubble"
@@ -224,7 +224,7 @@
     .section-index { color: var(--green); font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; }
     h2 { margin: 8px 0 0; font-size: clamp(31px, 5vw, 52px); line-height: 1.06; letter-spacing: 0; }
     .section-lead { margin: 0; color: var(--muted); line-height: 1.7; max-width: 620px; }
-    .feature-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .feature-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
     .feature-card {
       min-height: 174px;
       padding: 20px;
@@ -397,14 +397,13 @@
 
       <section class="section">
         <div class="section-heading">
-          <div><span class="section-index">01 / SYSTEM</span><h2 data-i18n="featureTitle">Four useful actions, together on your desktop.</h2></div>
-          <p class="section-lead" data-i18n="featureLead">Quick Card Purchase, Maple API, Session Sync and Model Sync, together on your desktop.</p>
+          <div><span class="section-index">01 / SYSTEM</span><h2 data-i18n="featureTitle">Three useful actions, together on your desktop.</h2></div>
+          <p class="section-lead" data-i18n="featureLead">Quick Card Purchase, Session Sync and Model Sync, together on your desktop.</p>
         </div>
         <div class="feature-grid">
           <article class="feature-card"><span class="feature-number">01</span><strong data-i18n="card1Title">Quick Card Purchase</strong><p data-i18n="card1Text">Open the card purchase page directly from the app.</p></article>
-          <article class="feature-card"><span class="feature-number">02</span><strong data-i18n="card2Title">Maple API</strong><p data-i18n="card2Text">Open the Maple API page directly from the app.</p></article>
-          <article class="feature-card"><span class="feature-number">03</span><strong data-i18n="card3Title">Session Sync</strong><p data-i18n="card3Text">Run one-click session sync, including checks, migration and restart. Save your work first.</p></article>
-          <article class="feature-card"><span class="feature-number">04</span><strong data-i18n="card4Title">Model Sync</strong><p data-i18n="card4Text">Sync your current Maple models and restart Codex automatically. Save your work first.</p></article>
+          <article class="feature-card"><span class="feature-number">02</span><strong data-i18n="card2Title">Session Sync</strong><p data-i18n="card2Text">Run one-click session sync, including checks, migration and restart. Save your work first.</p></article>
+          <article class="feature-card"><span class="feature-number">03</span><strong data-i18n="card3Title">Model Sync</strong><p data-i18n="card3Text">Sync your current Maple models and restart Codex automatically. Save your work first.</p></article>
         </div>
       </section>
 
@@ -452,8 +451,8 @@
           <p class="section-lead" data-i18n="installLead">No terminal and no release-page detour. The main download button detects your operating system; these platform buttons always download the latest graphical installer directly.</p>
         </div>
         <div class="download-grid">
-          <article class="download-card"><span class="platform">macOS 13+</span><h3>Quota Bubble for macOS</h3><p data-i18n="macText">For macOS 13 or later on Apple silicon and Intel. Open the DMG, then drag Quota Bubble into Applications.</p><a class="button primary platform-download" id="macDownload" href="https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.51/QuotaBubble-4.2.51-macOS.dmg" data-i18n="downloadMac">Download for macOS</a><div class="release-tag" id="macReleaseTag">Latest release</div></article>
-          <article class="download-card"><span class="platform">Windows 10+</span><h3>Quota Bubble for Windows</h3><p data-i18n="windowsText">Self-contained desktop app with a graphical Setup wizard and an automatic desktop shortcut. No PowerShell or separate runtime required.</p><a class="button primary platform-download" id="windowsDownload" href="https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.51/QuotaBubble-4.2.51-Windows-Setup.exe" data-i18n="downloadWindows">Download for Windows</a><div class="release-tag" id="windowsReleaseTag">Latest release</div></article>
+          <article class="download-card"><span class="platform">macOS 13+</span><h3>Quota Bubble for macOS</h3><p data-i18n="macText">For macOS 13 or later on Apple silicon and Intel. Open the DMG, then drag Quota Bubble into Applications.</p><a class="button primary platform-download" id="macDownload" href="https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.52/QuotaBubble-4.2.52-macOS.dmg" data-i18n="downloadMac">Download for macOS</a><div class="release-tag" id="macReleaseTag">Latest release</div></article>
+          <article class="download-card"><span class="platform">Windows 10+</span><h3>Quota Bubble for Windows</h3><p data-i18n="windowsText">Self-contained desktop app with a graphical Setup wizard and an automatic desktop shortcut. No PowerShell or separate runtime required.</p><a class="button primary platform-download" id="windowsDownload" href="https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.52/QuotaBubble-4.2.52-Windows-Setup.exe" data-i18n="downloadWindows">Download for Windows</a><div class="release-tag" id="windowsReleaseTag">Latest release</div></article>
         </div>
       </section>
     </main>
@@ -554,124 +553,104 @@
 };
     const shortcutContent = {
   "zh": {
-    "featureTitle": "四项常用操作，集中在桌面。",
-    "featureLead": "快捷购卡、Maple API、会话同步与模型同步，常用操作集中在桌面。",
+    "featureTitle": "三项常用操作，集中在桌面。",
+    "featureLead": "快捷购卡、会话同步与模型同步，常用操作集中在桌面。",
     "card1Title": "快捷购卡",
     "card1Text": "从应用直接打开购卡页面。",
-    "card2Title": "Maple API",
-    "card2Text": "从应用直接打开 Maple API 页面。",
-    "card3Title": "会话同步",
-    "card3Text": "一键同步会话，执行检查、迁移与重启。开始前请保存工作。",
-    "card4Title": "模型同步",
-    "card4Text": "同步当前 Maple 模型并自动重启 Codex。开始前请保存工作。"
+    "card2Title": "会话同步",
+    "card2Text": "一键同步会话，执行检查、迁移与重启。开始前请保存工作。",
+    "card3Title": "模型同步",
+    "card3Text": "同步当前 Maple 模型并自动重启 Codex。开始前请保存工作。"
   },
   "en": {
-    "featureTitle": "Four useful actions, together on your desktop.",
-    "featureLead": "Quick Card Purchase, Maple API, Session Sync and Model Sync, together on your desktop.",
+    "featureTitle": "Three useful actions, together on your desktop.",
+    "featureLead": "Quick Card Purchase, Session Sync and Model Sync, together on your desktop.",
     "card1Title": "Quick Card Purchase",
     "card1Text": "Open the card purchase page directly from the app.",
-    "card2Title": "Maple API",
-    "card2Text": "Open the Maple API page directly from the app.",
-    "card3Title": "Session Sync",
-    "card3Text": "Run one-click session sync, including checks, migration and restart. Save your work first.",
-    "card4Title": "Model Sync",
-    "card4Text": "Sync your current Maple models and restart Codex automatically. Save your work first."
+    "card2Title": "Session Sync",
+    "card2Text": "Run one-click session sync, including checks, migration and restart. Save your work first.",
+    "card3Title": "Model Sync",
+    "card3Text": "Sync your current Maple models and restart Codex automatically. Save your work first."
   },
   "ja": {
-    "featureTitle": "よく使う4つの操作をデスクトップに。",
-    "featureLead": "カード購入、Maple API、セッション同期、モデル同期をまとめました。",
+    "featureTitle": "よく使う3つの操作をデスクトップに。",
+    "featureLead": "カード購入、セッション同期、モデル同期をまとめました。",
     "card1Title": "カード購入",
     "card1Text": "アプリからカード購入ページを直接開きます。",
-    "card2Title": "Maple API",
-    "card2Text": "アプリから Maple API ページを直接開きます。",
-    "card3Title": "セッション同期",
-    "card3Text": "ワンクリックでセッションの確認、移行、再起動を実行します。先に作業を保存してください。",
-    "card4Title": "モデル同期",
-    "card4Text": "現在の Maple モデルを同期し、Codex を自動的に再起動します。先に作業を保存してください。"
+    "card2Title": "セッション同期",
+    "card2Text": "ワンクリックでセッションの確認、移行、再起動を実行します。先に作業を保存してください。",
+    "card3Title": "モデル同期",
+    "card3Text": "現在の Maple モデルを同期し、Codex を自動的に再起動します。先に作業を保存してください。"
   },
   "ko": {
-    "featureTitle": "자주 쓰는 네 가지 작업을 데스크톱에서.",
-    "featureLead": "카드 구매, Maple API, 세션 동기화, 모델 동기화를 한곳에 모았습니다.",
+    "featureTitle": "자주 쓰는 세 가지 작업을 데스크톱에서.",
+    "featureLead": "카드 구매, 세션 동기화, 모델 동기화를 한곳에 모았습니다.",
     "card1Title": "빠른 카드 구매",
     "card1Text": "앱에서 카드 구매 페이지를 바로 엽니다.",
-    "card2Title": "Maple API",
-    "card2Text": "앱에서 Maple API 페이지를 바로 엽니다.",
-    "card3Title": "세션 동기화",
-    "card3Text": "한 번의 클릭으로 검사, 세션 이전, 재시작을 실행합니다. 먼저 작업을 저장하세요.",
-    "card4Title": "모델 동기화",
-    "card4Text": "현재 Maple 모델을 동기화하고 Codex를 자동으로 다시 시작합니다. 먼저 작업을 저장하세요."
+    "card2Title": "세션 동기화",
+    "card2Text": "한 번의 클릭으로 검사, 세션 이전, 재시작을 실행합니다. 먼저 작업을 저장하세요.",
+    "card3Title": "모델 동기화",
+    "card3Text": "현재 Maple 모델을 동기화하고 Codex를 자동으로 다시 시작합니다. 먼저 작업을 저장하세요."
   },
   "de": {
-    "featureTitle": "Vier praktische Aktionen auf dem Desktop.",
-    "featureLead": "Kartenkauf, Maple API, Sitzungssynchronisierung und Modellsync an einem Ort.",
+    "featureTitle": "Drei praktische Aktionen auf dem Desktop.",
+    "featureLead": "Kartenkauf, Sitzungssynchronisierung und Modellsync an einem Ort.",
     "card1Title": "Kartenkauf",
     "card1Text": "Öffnet die Seite zum Kartenkauf direkt aus der App.",
-    "card2Title": "Maple API",
-    "card2Text": "Öffnet die Maple API-Seite direkt aus der App.",
-    "card3Title": "Sitzungen synchronisieren",
-    "card3Text": "Startet Prüfungen, Migration und Neustart mit einem Klick. Speichere zuerst deine Arbeit.",
-    "card4Title": "Modellsync",
-    "card4Text": "Synchronisiert die aktuellen Maple-Modelle und startet Codex automatisch neu. Speichere zuerst deine Arbeit."
+    "card2Title": "Sitzungen synchronisieren",
+    "card2Text": "Startet Prüfungen, Migration und Neustart mit einem Klick. Speichere zuerst deine Arbeit.",
+    "card3Title": "Modellsync",
+    "card3Text": "Synchronisiert die aktuellen Maple-Modelle und startet Codex automatisch neu. Speichere zuerst deine Arbeit."
   },
   "fr": {
-    "featureTitle": "Quatre actions pratiques sur votre bureau.",
-    "featureLead": "Achat de cartes, Maple API, synchronisation des sessions et des modèles au même endroit.",
+    "featureTitle": "Trois actions pratiques sur votre bureau.",
+    "featureLead": "Achat de cartes et synchronisation des sessions et des modèles au même endroit.",
     "card1Title": "Achat de cartes",
     "card1Text": "Ouvre directement la page d’achat de cartes depuis l’application.",
-    "card2Title": "Maple API",
-    "card2Text": "Ouvre directement la page Maple API depuis l’application.",
-    "card3Title": "Synchroniser les sessions",
-    "card3Text": "Lance les vérifications, la migration et le redémarrage en un clic. Enregistrez votre travail avant de commencer.",
-    "card4Title": "Sync modèles",
-    "card4Text": "Synchronise les modèles Maple actuels et redémarre Codex automatiquement. Enregistrez votre travail avant de commencer."
+    "card2Title": "Synchroniser les sessions",
+    "card2Text": "Lance les vérifications, la migration et le redémarrage en un clic. Enregistrez votre travail avant de commencer.",
+    "card3Title": "Sync modèles",
+    "card3Text": "Synchronise les modèles Maple actuels et redémarre Codex automatiquement. Enregistrez votre travail avant de commencer."
   },
   "es": {
-    "featureTitle": "Cuatro acciones útiles en tu escritorio.",
-    "featureLead": "Compra de tarjetas, Maple API y sincronización de sesiones y modelos en un solo lugar.",
+    "featureTitle": "Tres acciones útiles en tu escritorio.",
+    "featureLead": "Compra de tarjetas y sincronización de sesiones y modelos en un solo lugar.",
     "card1Title": "Comprar tarjetas",
     "card1Text": "Abre la página de compra de tarjetas desde la aplicación.",
-    "card2Title": "Maple API",
-    "card2Text": "Abre la página de Maple API desde la aplicación.",
-    "card3Title": "Sincronizar sesiones",
-    "card3Text": "Ejecuta las comprobaciones, la migración y el reinicio con un clic. Guarda tu trabajo antes de empezar.",
-    "card4Title": "Sincronizar modelos",
-    "card4Text": "Sincroniza los modelos actuales de Maple y reinicia Codex automáticamente. Guarda tu trabajo antes de empezar."
+    "card2Title": "Sincronizar sesiones",
+    "card2Text": "Ejecuta las comprobaciones, la migración y el reinicio con un clic. Guarda tu trabajo antes de empezar.",
+    "card3Title": "Sincronizar modelos",
+    "card3Text": "Sincroniza los modelos actuales de Maple y reinicia Codex automáticamente. Guarda tu trabajo antes de empezar."
   },
   "pt": {
-    "featureTitle": "Quatro ações úteis no seu desktop.",
-    "featureLead": "Compra de cartões, Maple API e sincronização de sessões e modelos em um só lugar.",
+    "featureTitle": "Três ações úteis no seu desktop.",
+    "featureLead": "Compra de cartões e sincronização de sessões e modelos em um só lugar.",
     "card1Title": "Comprar cartões",
     "card1Text": "Abre a página de compra de cartões diretamente no aplicativo.",
-    "card2Title": "Maple API",
-    "card2Text": "Abre a página Maple API diretamente no aplicativo.",
-    "card3Title": "Sincronizar sessões",
-    "card3Text": "Executa verificações, migração e reinício com um clique. Salve seu trabalho antes de começar.",
-    "card4Title": "Sincronizar modelos",
-    "card4Text": "Sincroniza os modelos atuais do Maple e reinicia o Codex automaticamente. Salve seu trabalho antes de começar."
+    "card2Title": "Sincronizar sessões",
+    "card2Text": "Executa verificações, migração e reinício com um clique. Salve seu trabalho antes de começar.",
+    "card3Title": "Sincronizar modelos",
+    "card3Text": "Sincroniza os modelos atuais do Maple e reinicia o Codex automaticamente. Salve seu trabalho antes de começar."
   },
   "it": {
-    "featureTitle": "Quattro azioni utili sul desktop.",
-    "featureLead": "Acquisto di carte, Maple API e sincronizzazione di sessioni e modelli in un unico posto.",
+    "featureTitle": "Tre azioni utili sul desktop.",
+    "featureLead": "Acquisto di carte e sincronizzazione di sessioni e modelli in un unico posto.",
     "card1Title": "Acquisto carte",
     "card1Text": "Apre la pagina di acquisto delle carte dall’app.",
-    "card2Title": "Maple API",
-    "card2Text": "Apre la pagina Maple API dall’app.",
-    "card3Title": "Sincronizza sessioni",
-    "card3Text": "Esegue controlli, migrazione e riavvio con un clic. Salva il lavoro prima di iniziare.",
-    "card4Title": "Sincronizza modelli",
-    "card4Text": "Sincronizza i modelli Maple attuali e riavvia Codex automaticamente. Salva prima il tuo lavoro."
+    "card2Title": "Sincronizza sessioni",
+    "card2Text": "Esegue controlli, migrazione e riavvio con un clic. Salva il lavoro prima di iniziare.",
+    "card3Title": "Sincronizza modelli",
+    "card3Text": "Sincronizza i modelli Maple attuali e riavvia Codex automaticamente. Salva prima il tuo lavoro."
   },
   "nl": {
-    "featureTitle": "Vier handige acties op je desktop.",
-    "featureLead": "Kaarten kopen, Maple API, sessies synchroniseren en modellen synchroniseren op één plek.",
+    "featureTitle": "Drie handige acties op je desktop.",
+    "featureLead": "Kaarten kopen, sessies synchroniseren en modellen synchroniseren op één plek.",
     "card1Title": "Kaarten kopen",
     "card1Text": "Opent de pagina voor kaartenaankoop vanuit de app.",
-    "card2Title": "Maple API",
-    "card2Text": "Opent de Maple API-pagina vanuit de app.",
-    "card3Title": "Sessies synchroniseren",
-    "card3Text": "Voert controles, migratie en herstart uit met één klik. Sla eerst je werk op.",
-    "card4Title": "Modellen sync",
-    "card4Text": "Synchroniseert de huidige Maple-modellen en herstart Codex automatisch. Sla eerst je werk op."
+    "card2Title": "Sessies synchroniseren",
+    "card2Text": "Voert controles, migratie en herstart uit met één klik. Sla eerst je werk op.",
+    "card3Title": "Modellen sync",
+    "card3Text": "Synchroniseert de huidige Maple-modellen en herstart Codex automatisch. Sla eerst je werk op."
   }
 };
     const sessionSyncCopy = {
@@ -715,11 +694,11 @@
     }, websiteContent[code] || {}, shortcutContent[code]));
 
     const fallbackRelease = {
-      "tag": "v4.2.51",
-      "macTag": "v4.2.51",
-      "windowsTag": "v4.2.51",
-      "mac": "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.51/QuotaBubble-4.2.51-macOS.dmg",
-      "windows": "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.51/QuotaBubble-4.2.51-Windows-Setup.exe"
+      "tag": "v4.2.52",
+      "macTag": "v4.2.52",
+      "windowsTag": "v4.2.52",
+      "mac": "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.52/QuotaBubble-4.2.52-macOS.dmg",
+      "windows": "https://github.com/itzhaolei/quota-bubble/releases/download/v4.2.52/QuotaBubble-4.2.52-Windows-Setup.exe"
     };
     let release = { ...fallbackRelease };
     const supported = Object.keys(translations);
