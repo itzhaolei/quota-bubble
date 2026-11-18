@@ -3,31 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>额度泡泡使用帮助｜查看 Codex 配额、恢复时间与会话同步</title>
-  <meta id="pageDescription" name="description" content="额度泡泡（Quota Bubble）是独立开发的 Codex 配额查看工具。本帮助介绍 macOS 和 Windows 安装、官方订阅额度、恢复时间、可用重置与一键同步会话。">
+  <title>Maple AI 使用帮助｜安装与 5.0 工作台</title>
+  <meta id="pageDescription" name="description" content="了解 macOS 和 Windows 安装步骤，以及 Maple AI 5.0 工作台的用量、API 密钥、模型费率、兑换、工具箱和诊断。">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link id="canonicalLink" rel="canonical" href="https://codex.maple.xin/help/">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="额度泡泡 · Quota Bubble">
-  <meta id="ogTitle" property="og:title" content="额度泡泡使用帮助｜查看 Codex 配额、恢复时间与会话同步">
-  <meta id="ogDescription" property="og:description" content="额度泡泡（Quota Bubble）是独立开发的 Codex 配额查看工具。本帮助介绍 macOS 和 Windows 安装、官方订阅额度、恢复时间、可用重置与一键同步会话。">
+  <meta property="og:site_name" content="Maple AI">
+  <meta id="ogTitle" property="og:title" content="Maple AI 使用帮助｜安装与 5.0 工作台">
+  <meta id="ogDescription" property="og:description" content="了解 macOS 和 Windows 安装步骤，以及 Maple AI 5.0 工作台的用量、API 密钥、模型费率、兑换、工具箱和诊断。">
   <meta id="ogUrl" property="og:url" content="https://codex.maple.xin/help/">
   <meta id="ogLocale" property="og:locale" content="zh_CN">
-  <meta property="og:image" content="https://codex.maple.xin/assets/quota-bubble-social-plus-two-actions.png">
+  <meta property="og:image" content="https://codex.maple.xin/assets/maple-ai-social.png?v=20261119-2">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="额度泡泡 Codex Plus 订阅示例：两条重置记录与五项快捷功能，真实组件精简展示">
+  <meta property="og:image:alt" content="Maple AI 桌面工作台">
   <meta name="twitter:card" content="summary_large_image">
-  <meta id="twitterTitle" name="twitter:title" content="额度泡泡使用帮助｜查看 Codex 配额、恢复时间与会话同步">
-  <meta id="twitterDescription" name="twitter:description" content="额度泡泡（Quota Bubble）是独立开发的 Codex 配额查看工具。本帮助介绍 macOS 和 Windows 安装、官方订阅额度、恢复时间、可用重置与一键同步会话。">
-  <meta name="twitter:image" content="https://codex.maple.xin/assets/quota-bubble-social-plus-two-actions.png">
-  <meta name="twitter:image:alt" content="额度泡泡 Codex Plus 订阅示例：两条重置记录与五项快捷功能，真实组件精简展示">
+  <meta id="twitterTitle" name="twitter:title" content="Maple AI 使用帮助｜安装与 5.0 工作台">
+  <meta id="twitterDescription" name="twitter:description" content="了解 macOS 和 Windows 安装步骤，以及 Maple AI 5.0 工作台的用量、API 密钥、模型费率、兑换、工具箱和诊断。">
+  <meta name="twitter:image" content="https://codex.maple.xin/assets/maple-ai-social.png?v=20261119-2">
+  <meta name="twitter:image:alt" content="Maple AI 桌面工作台">
   <script id="pageMetadata" type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": "https://codex.maple.xin/help/#webpage",
-  "name": "额度泡泡使用帮助｜查看 Codex 配额、恢复时间与会话同步",
-  "description": "额度泡泡（Quota Bubble）是独立开发的 Codex 配额查看工具。本帮助介绍 macOS 和 Windows 安装、官方订阅额度、恢复时间、可用重置与一键同步会话。",
+  "name": "Maple AI 使用帮助｜安装与 5.0 工作台",
+  "description": "了解 macOS 和 Windows 安装步骤，以及 Maple AI 5.0 工作台的用量、API 密钥、模型费率、兑换、工具箱和诊断。",
   "url": "https://codex.maple.xin/help/",
   "inLanguage": "zh-CN",
   "about": {
@@ -36,65 +36,822 @@
   "isPartOf": {
     "@type": "WebSite",
     "@id": "https://codex.maple.xin/#website",
-    "name": "额度泡泡 · Quota Bubble",
+    "name": "Maple AI",
     "url": "https://codex.maple.xin/"
   }
 }</script>
-  <link rel="icon" href="/assets/icon.png?v=20260926-4">
+  <link rel="icon" href="/assets/maple-ai-icon.png">
   <style>
-    :root { color-scheme: dark; --text: #f6faf7; --muted: #b8c6be; --green: #00ef26; }
-    * { box-sizing: border-box; } body { margin: 0; color: var(--text); background: #06090b; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.8; }
+    :root { color-scheme: light; --text: #192b2b; --muted: #63716e; --green: #087e78; }
+    * { box-sizing: border-box; } body { margin: 0; color: var(--text); background: #f4f3ee; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.8; }
     a { color: var(--green); } .page { width: min(880px, calc(100% - 40px)); margin: auto; }
-    header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 24px 0; border-bottom: 1px solid #ffffff21; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 24px 0; border-bottom: 1px solid #ced5ce; }
+    .region-notice { margin: 12px 0 0; padding: 12px 16px; border: 1px solid #cfaf79; border-inline-start: 4px solid #97651a; border-radius: 6px; background: #fff3d6; color: #50360e; font-size: .875rem; font-weight: 650; line-height: 1.45; }
     .brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 800; text-decoration: none; } .brand img { width: 36px; height: 36px; border-radius: 8px; }
+    .language-select { min-height: 36px; max-width: 130px; border: 1px solid #ced5ce; border-radius: 6px; background: transparent; color: var(--text); font: inherit; font-size: 13px; padding: 0 8px; }
     nav { display: flex; gap: 18px; } h1 { font-size: clamp(30px, 6vw, 48px); line-height: 1.25; margin-top: 52px; } h2 { font-size: 24px; line-height: 1.4; } p, li { color: var(--muted); } strong { color: var(--text); }
-    section { padding: 24px 0; border-top: 1px solid #ffffff21; } .intro { margin-bottom: 32px; } .contents { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 28px 0 40px; } .button { display: inline-flex; margin: 12px 0 24px; padding: 10px 18px; border-radius: 8px; background: var(--green); color: #021006; font-weight: 760; text-decoration: none; }
-    figure { margin: 24px 0; padding: 24px; border: 1px solid #ffffff21; border-radius: 8px; background: #0d1417; text-align: center; } figure img { display: block; width: min(330px, 100%); height: auto; margin: auto; } figcaption, footer { font-size: 13px; color: var(--muted); } figcaption { margin-top: 16px; } footer { padding: 28px 0 40px; border-top: 1px solid #ffffff21; }
-    @media(max-width: 520px) { .page { width: calc(100% - 28px); } header { align-items: flex-start; } nav { flex-shrink: 0; gap: 12px; font-size: 14px; } .brand { font-size: 14px; } figure { padding: 16px; } }
+    section { padding: 24px 0; border-top: 1px solid #ced5ce; } .intro { margin-bottom: 32px; } .contents { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 28px 0 40px; } .button { display: inline-flex; margin: 12px 0 24px; padding: 10px 18px; border-radius: 8px; background: var(--green); color: #ffffff; font-weight: 760; text-decoration: none; }
+    footer { padding: 28px 0 40px; border-top: 1px solid #ced5ce; font-size: 13px; color: var(--muted); }
+    @media(max-width: 520px) { .page { width: calc(100% - 28px); } header { flex-wrap: wrap; } header nav { align-items: center; flex-wrap: wrap; gap: 12px; font-size: 14px; } .brand { font-size: 14px; } }
   </style>
 </head>
 <body><div class="page">
-  <header><a class="brand" href="/?lang=zh"><img src="/assets/icon.png?v=20260926-4" alt="额度泡泡 Logo">额度泡泡 · Quota Bubble</a><nav aria-label="网站导航"><a href="/?lang=zh">首页</a><a href="/en/?lang=en" lang="en">English</a></nav></header>
+  <header><a class="brand" href="/"><img src="/assets/maple-ai-icon.png" alt="">Maple AI</a><nav><a href="/" data-i18n="navHome">首页</a><select class="language-select" id="languageSelect" aria-label="网站语言"><option value="system">跟随系统</option><option value="zh">简体中文</option><option value="en">English</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="de">Deutsch</option><option value="fr">Français</option><option value="es">Español</option><option value="pt">Português</option><option value="ru">Русский</option><option value="it">Italiano</option></select></nav></header>
+  <p class="region-notice" data-i18n="regionAvailability">Maple AI 不在中国大陆、香港、澳门等地区运营。</p>
   <main>
-    <h1>额度泡泡使用帮助</h1>
-    <p class="intro">额度泡泡（Quota Bubble）是独立开发的 Codex 配额查看工具，支持 macOS 与 Windows。这里介绍官方订阅模式的安装、额度查看和会话同步；具体字段以当前账号实际返回的数据为准。</p>
-    <nav class="contents" aria-label="帮助目录"><a href="#about">常见问题</a><a href="#install">安装</a><a href="#quota">5 小时与每周额度</a><a href="#reset">恢复与重置</a><a href="#sync">会话同步</a><a href="#status">桌面状态</a></nav>
-    <section id="about"><h2>额度泡泡常见问题</h2>
-      <h3>额度泡泡是什么？</h3>
-      <p>额度泡泡（Quota Bubble）是独立开发的 Codex 配额查看工具，支持 macOS 与 Windows。它使用本机已有的 Codex 登录状态，展示官方订阅账号的剩余额度与重置时间，并支持一键同步会话。</p>
-      <h3>额度泡泡能查看哪些信息？</h3>
-      <p>可查看账号支持的 5 小时与每周剩余额度、恢复时间、账号信息及可用重置额度，也可查看网速、带宽、存储和内存。具体字段与可用权益以当前账号实际返回的数据为准。</p>
-      <h3>额度泡泡是 OpenAI 官方产品吗？</h3>
-      <p>不是。额度泡泡由独立开发者制作，非 OpenAI 官方产品。“官方订阅模式”指展示的 Codex 账号模式，不代表产品获得 OpenAI 官方授权。</p>
-      <h3>在哪里下载和安装额度泡泡？</h3>
-      <p>请通过<a href="/#platformDownloads">额度泡泡官网</a>选择 macOS DMG 或 Windows Setup 安装器。macOS 13 及以上支持 Apple 芯片和 Intel；Windows 需要 Windows 10 及以上。<a href="#install">查看具体安装步骤</a>。</p>
-      <h3>会话同步会做什么？</h3>
-      <p>点击“会话同步”即可一键同步会话，执行环境检查、工具准备、会话迁移与重启。流程会关闭并重新打开 Codex，开始前请保存正在进行的工作。<a href="#sync">查看会话同步说明</a>。</p>
+    <h1 data-i18n="helpTitle">Maple AI 使用帮助</h1>
+    <p class="intro" data-i18n="helpLead">查看 Maple AI 5.0 工作台预览。下载安装包时，请以下载区标明的公开版本为准。</p>
+    <nav class="contents"><a href="#install" data-i18n="helpInstallTitle">安装 Maple AI</a><a href="#workspace" data-i18n="helpWorkspaceTitle">了解 5.0 工作台</a><a href="#sync" data-i18n="card4Title">工具箱</a><a href="#status" data-i18n="card5Title">故障排查</a></nav>
+    <section id="about"><h2>Maple AI</h2>
+      <p data-i18n="brandDefinition">Maple AI 是适用于 macOS 和 Windows 的 Codex 桌面助手。</p>
     </section>
-    <section id="install"><h2>1. 安装 macOS 或 Windows 版</h2>
-      <p><strong>macOS 13 及以上：</strong>从官网下载 DMG，打开后将 <strong>Quota Bubble.app</strong> 拖入 <strong>Applications（应用程序）</strong>，再从“应用程序”中启动。支持 Apple 芯片与 Intel。</p>
-      <p><strong>Windows 10 及以上：</strong>从官网下载 Setup 安装器，运行并按向导完成安装，然后从桌面快捷方式启动。</p>
-      <p>请先在本机登录 Codex 官方订阅账号。额度泡泡使用本机已有的 Codex 登录状态读取该账号配额，不需要在官网提交账号凭据。</p>
-      <a class="button" href="/#platformDownloads">前往官网下载</a>
+    <section id="install"><h2 data-i18n="helpInstallTitle">安装 Maple AI</h2>
+      <p><strong>macOS 13+</strong> <span data-i18n="macText">适用于 macOS 13 及以上，支持 Apple 芯片和 Intel。打开 DMG，然后将应用拖入“应用程序”。</span></p>
+      <p><strong>Windows 10+</strong> <span data-i18n="windowsText">适用于 Windows 10 及以上。运行 Setup 安装器，按向导完成安装。</span></p>
+      <a class="button" href="/#platformDownloads" data-i18n="navDownloads">下载</a>
     </section>
-    <section id="quota"><h2>2. 查看 5 小时与每周剩余额度</h2>
-      <p>打开额度泡泡，查看对应配额窗口的剩余百分比和进度条。若账号提供 5 小时限制，会同时显示该窗口；没有该限制时，界面保留可用的每周配额信息。</p>
-      <p>这些读数来自当前账号，不是所有 Codex 订阅都拥有相同额度。菜单栏或托盘百分比优先使用 5 小时配额，没有时使用每周配额。</p>
-      <figure><img src="/assets/quota-bubble-codex-plus-two-actions.png" alt="额度泡泡 Codex Plus 订阅示例：两条重置记录与五项快捷功能，真实组件精简展示" width="1080" height="1713" loading="lazy"><figcaption>示例账号、额度、资源读数与在线客户端数量 · 真实组件精简展示 · 快捷功能可用项随配置变化</figcaption></figure>
+    <section id="workspace"><h2 data-i18n="helpWorkspaceTitle">了解 5.0 工作台</h2>
+      <ul>
+        <li><strong data-i18n="card1Title">仪表盘</strong> <span data-i18n="card1Text">查看账户余额、今日 Token 和请求数，跟踪近期费用与模型用量。</span></li>
+        <li><strong data-i18n="card2Title">API 密钥与模型费率</strong> <span data-i18n="card2Text">管理与选择 API 密钥和分组，分别查看 Maple AI 与 OpenAI 的模型费率。</span></li>
+        <li><strong data-i18n="card3Title">兑换</strong> <span data-i18n="card3Text">在工作台输入兑换码，查看兑换结果与账户余额。</span></li>
+        <li><strong data-i18n="card6Title">设置</strong> <span data-i18n="card6Text">在五种界面风格之间切换，设置显示语言和各风格的声音。</span></li>
+      </ul>
     </section>
-    <section id="reset"><h2>3. 区分额度恢复时间与手动重置</h2>
-      <p><strong>恢复时间：</strong>配额旁的倒计时和日期表示该额度窗口何时恢复。它不是订阅到期时间，两个日期请分别查看。</p>
-      <p><strong>手动重置：</strong>仅当账号支持并存在可用重置额度时，才按界面提供的操作使用。手动重置会消耗对应额度，请先阅读确认提示；不能将此功能理解为所有订阅均可无限重置。</p>
+    <section id="sync"><h2 data-i18n="card4Title">工具箱</h2>
+      <p data-i18n="helpSyncText">工具箱同步或应用语言包时，可能会关闭并重新打开 Codex。请先保存工作，并等待进度提示完成。</p>
     </section>
-    <section id="sync"><h2>4. 一键同步会话</h2>
-      <p>点击窗口中的 <strong>会话同步</strong> 即可一键同步会话。开始前请保存正在进行的工作；进度窗口依次显示环境检查、工具准备、会话迁移和重启结果。按当前提示等待完成。</p>
-      <p>同步流程需要关闭并重新打开 Codex。完成后查看明确的成功或失败结果；如果失败，请保留错误提示，不要把启动请求已发出当作迁移成功。</p>
+    <section id="status"><h2 data-i18n="card5Title">故障排查</h2>
+      <p data-i18n="helpStatusText">检查网络连接、资源使用情况、CC Switch、Maple AI 和 Node.js。调整环境后，可重新检查。</p>
     </section>
-    <section id="status"><h2>5. 查看桌面与运行状态</h2>
-      <p>窗口也提供网速、估算带宽、可用存储、内存与诊断入口。实时网速反映当前流量，估算带宽受线路与测量环境影响，不等于宽带套餐上限。</p>
-      <p>底部数量表示匿名活跃客户端数，不是经过验证的在线人数；宣传预览中的数量为示例。版本号显示在窗口底部，可用于确认当前安装版本。</p>
-    </section>
-    <section><h2>继续查看产品与下载</h2><p><a href="/">返回额度泡泡官网</a>，了解 Codex 配额查看工具并下载当前安装器。额度泡泡独立开发，非 OpenAI 官方产品。</p></section>
   </main>
-  <footer>© 2026 额度泡泡 · Quota Bubble</footer>
-</div></body></html>
+  <footer>© 2026 Maple AI</footer>
+</div>
+<script>
+    const translations = {
+  "zh": {
+    "brandName": "MAPLE AI",
+    "seoTitle": "Maple AI｜Codex 桌面工作台",
+    "seoDescription": "在 Maple AI 工作台中查看用量，管理 API 密钥，比较模型费率，并使用 Codex 同步与环境诊断工具。支持 macOS 和 Windows。",
+    "help": "使用帮助",
+    "helpTitle": "Maple AI 使用帮助",
+    "helpLead": "查看 Maple AI 5.0 工作台预览。下载安装包时，请以下载区标明的公开版本为准。",
+    "helpInstallTitle": "安装 Maple AI",
+    "helpWorkspaceTitle": "了解 5.0 工作台",
+    "helpSyncText": "工具箱同步或应用语言包时，可能会关闭并重新打开 Codex。请先保存工作，并等待进度提示完成。",
+    "helpStatusText": "检查网络连接、资源使用情况、CC Switch、Maple AI 和 Node.js。调整环境后，可重新检查。",
+    "navHome": "首页",
+    "languageLabel": "网站语言",
+    "regionAvailability": "Maple AI 不在中国大陆、香港、澳门等地区运营。",
+    "skipContent": "跳至正文",
+    "eyebrow": "Codex 桌面工作台",
+    "tagline": "用量、密钥和工具，集中在一个窗口。",
+    "lead": "查看今日 Token 和近期费用，管理 API 密钥，比较模型费率。需要时，从工具箱同步 Codex，或检查本机环境。",
+    "brandDefinition": "Maple AI 是适用于 macOS 和 Windows 的 Codex 桌面助手。",
+    "heroCaption": "Maple AI 5.0 工作台预览，使用演示数据",
+    "navOverview": "功能",
+    "navInterface": "界面",
+    "navDownloads": "下载",
+    "viewInterface": "查看工作台界面",
+    "featureTitle": "从看用量到排查问题",
+    "featureLead": "Maple AI 5.0 工作台设有六个页面，覆盖账户、Codex 操作和本机状态。",
+    "card1Title": "仪表盘",
+    "card1Text": "查看账户余额、今日 Token 和请求数，跟踪近期费用与模型用量。",
+    "card2Title": "API 密钥与模型费率",
+    "card2Text": "管理与选择 API 密钥和分组，分别查看 Maple AI 与 OpenAI 的模型费率。",
+    "card3Title": "兑换",
+    "card3Text": "在工作台输入兑换码，查看兑换结果与账户余额。",
+    "card4Title": "工具箱",
+    "card4Text": "同步 Codex 会话与模型，或应用简体中文语言包。界面显示每一步的进度。",
+    "card5Title": "故障排查",
+    "card5Text": "检查网络连通、带宽以及内存与存储使用情况，定位本机环境问题。",
+    "card6Title": "设置",
+    "card6Text": "在五种界面风格之间切换，设置显示语言和各风格的声音。",
+    "interfaceTitle": "看看 5.0 工作台",
+    "interfaceLead": "截图来自 Maple AI 5.0 测试版，使用演示数据。正式安装包的版本见下载区。",
+    "dashboardAlt": "Maple AI 仪表盘，展示演示用量和费用",
+    "pricingAlt": "Maple AI API 密钥与模型费率页面",
+    "toolboxAlt": "Maple AI 工具箱，展示同步与语言包工具",
+    "signal1": "macOS 与 Windows",
+    "signal3": "网站支持 10 种语言",
+    "publicLabel": "公开版本",
+    "publicNotice": "工作台截图展示的是 5.0 测试版。安装包以下载区标明的公开版本为准。",
+    "installTitle": "下载 Maple AI",
+    "installLead": "选择适合你系统的正式安装包。",
+    "macText": "适用于 macOS 13 及以上，支持 Apple 芯片和 Intel。打开 DMG，然后将应用拖入“应用程序”。",
+    "windowsText": "适用于 Windows 10 及以上。运行 Setup 安装器，按向导完成安装。",
+    "system": "跟随系统",
+    "latest": "最新版本",
+    "chooseDownload": "选择电脑系统",
+    "downloadMac": "下载 macOS 版",
+    "downloadWindows": "下载 Windows 版",
+    "verifyDownload": "查看文件校验值",
+    "verificationUnavailable": "校验信息见对应发布记录",
+    "releaseNotes": "查看发布记录",
+    "shareTitle": "分享 Maple AI",
+    "shareLead": "复制官网链接，或通过系统分享。",
+    "shareCTA": "分享官网",
+    "copyLink": "复制官网链接",
+    "copied": "链接已复制。",
+    "copyFailed": "链接复制失败。",
+    "shared": "已打开系统分享。",
+    "footer": "独立开发的 Codex 桌面工具。"
+  },
+  "en": {
+    "brandName": "MAPLE AI",
+    "seoTitle": "Maple AI | Codex desktop workspace",
+    "seoDescription": "View usage, manage API keys, compare model rates, and use Codex sync and diagnostics in Maple AI for macOS and Windows.",
+    "help": "User guide",
+    "helpTitle": "Maple AI user guide",
+    "helpLead": "Explore the Maple AI 5.0 workspace preview. The Downloads section shows the public version available to install.",
+    "helpInstallTitle": "Install Maple AI",
+    "helpWorkspaceTitle": "Explore the 5.0 workspace",
+    "helpSyncText": "Sync or language pack tools may close and reopen Codex. Save your work first and wait for the operation to finish.",
+    "helpStatusText": "Check network connectivity, resource usage, CC Switch, Maple AI and Node.js. Run the checks again after changing your setup.",
+    "navHome": "Home",
+    "languageLabel": "Website language",
+    "regionAvailability": "Maple AI does not operate in regions including mainland China, Hong Kong, and Macau.",
+    "skipContent": "Skip to content",
+    "eyebrow": "Codex desktop workspace",
+    "tagline": "Usage, keys and tools in one workspace.",
+    "lead": "See today’s tokens and recent costs, manage API keys and find model rates. Sync Codex from the toolbox and check your local environment when you need to.",
+    "brandDefinition": "Maple AI is a desktop companion for Codex on macOS and Windows.",
+    "heroCaption": "Maple AI 5.0 workspace preview with demo data",
+    "navOverview": "Features",
+    "navInterface": "Interface",
+    "navDownloads": "Download",
+    "viewInterface": "Explore the workspace",
+    "featureTitle": "From usage to troubleshooting",
+    "featureLead": "Six pages in the Maple AI 5.0 workspace cover your account, Codex tools and local system status.",
+    "card1Title": "Dashboard",
+    "card1Text": "See your balance, today’s tokens and request count, plus recent costs and usage by model.",
+    "card2Title": "API keys and model rates",
+    "card2Text": "Manage API keys and their groups, and browse Maple AI and OpenAI model rates separately.",
+    "card3Title": "Redemption",
+    "card3Text": "Enter a redemption code and check its result and your balance in the workspace.",
+    "card4Title": "Toolbox",
+    "card4Text": "Sync Codex sessions and models or apply the Simplified Chinese language pack. Follow each step as it runs.",
+    "card5Title": "Diagnostics",
+    "card5Text": "Check connectivity, bandwidth, memory and storage to troubleshoot your local environment.",
+    "card6Title": "Settings",
+    "card6Text": "Choose from five visual styles, set your display language and control sound for each style.",
+    "interfaceTitle": "Inside the 5.0 workspace",
+    "interfaceLead": "These screenshots show a Maple AI 5.0 test build with demo data. See Downloads for the public release.",
+    "dashboardAlt": "Maple AI dashboard with demo usage and costs",
+    "pricingAlt": "Maple AI API keys and model rates page",
+    "toolboxAlt": "Maple AI toolbox showing sync tools and the language pack",
+    "signal1": "macOS and Windows",
+    "signal3": "Website in 10 languages",
+    "publicLabel": "Public release",
+    "publicNotice": "The workspace screenshots show a 5.0 test build. Installers match the public versions listed here.",
+    "installTitle": "Download Maple AI",
+    "installLead": "Choose the published installer for your operating system.",
+    "macText": "For macOS 13 or later on Apple silicon and Intel. Open the DMG and drag the app to Applications.",
+    "windowsText": "For Windows 10 or later. Run the Setup installer and follow the wizard.",
+    "system": "Follow system",
+    "latest": "Latest release",
+    "chooseDownload": "Choose your system",
+    "downloadMac": "Download for macOS",
+    "downloadWindows": "Download for Windows",
+    "verifyDownload": "File verification",
+    "verificationUnavailable": "See the matching release for verification",
+    "releaseNotes": "Release notes",
+    "shareTitle": "Share Maple AI",
+    "shareLead": "Copy the website link or use your system share sheet.",
+    "shareCTA": "Share website",
+    "copyLink": "Copy website link",
+    "copied": "Link copied.",
+    "copyFailed": "Could not copy the link.",
+    "shared": "Share sheet opened.",
+    "footer": "An independently developed desktop tool for Codex."
+  },
+  "ja": {
+    "brandName": "MAPLE AI",
+    "seoTitle": "Maple AI｜Codex デスクトップワークスペース",
+    "seoDescription": "macOS と Windows 対応の Maple AI で、利用状況の確認、API キー管理、モデル料金の比較、Codex の同期と診断ができます。",
+    "help": "使い方",
+    "helpTitle": "Maple AI の使い方",
+    "helpLead": "Maple AI 5.0 のワークスペースをプレビューできます。インストールできる公開バージョンはダウンロード欄で確認してください。",
+    "helpInstallTitle": "Maple AI をインストールする",
+    "helpWorkspaceTitle": "5.0 ワークスペースの使い方",
+    "helpSyncText": "同期や言語パックの適用時に Codex が閉じられ、再度開くことがあります。先に作業内容を保存し、処理が完了するまでお待ちください。",
+    "helpStatusText": "ネットワーク接続、リソース使用状況、CC Switch、Maple AI、Node.js を確認できます。環境を変更したら、もう一度診断してください。",
+    "navHome": "ホーム",
+    "languageLabel": "サイトの言語",
+    "regionAvailability": "Maple AI は、中国本土、香港、マカオなどの地域では事業を行っていません。",
+    "skipContent": "本文へ移動",
+    "eyebrow": "Codex デスクトップワークスペース",
+    "tagline": "利用状況も、キーも、ツールもひとつの画面で。",
+    "lead": "今日のトークン数や最近の費用を確認し、API キーを管理してモデル料金を比較できます。ツールボックスから Codex を同期し、必要に応じて動作環境を診断できます。",
+    "brandDefinition": "Maple AI は macOS と Windows で使える Codex のデスクトップツールです。",
+    "heroCaption": "Maple AI 5.0 のプレビュー（デモデータ）",
+    "navOverview": "機能",
+    "navInterface": "画面",
+    "navDownloads": "ダウンロード",
+    "viewInterface": "ワークスペースを見る",
+    "featureTitle": "利用状況の確認からトラブル対応まで",
+    "featureLead": "Maple AI 5.0 では、アカウント、Codex の操作、動作環境を 6 つのページで扱えます。",
+    "card1Title": "ダッシュボード",
+    "card1Text": "残高、今日のトークン数とリクエスト数、最近の費用、モデル別の利用状況を確認できます。",
+    "card2Title": "API キーとモデル料金",
+    "card2Text": "API キーとグループを管理し、Maple AI と OpenAI のモデル料金をそれぞれ確認できます。",
+    "card3Title": "コード引き換え",
+    "card3Text": "ワークスペースでコードを入力して、引き換え結果と残高を確認できます。",
+    "card4Title": "ツールボックス",
+    "card4Text": "Codex のセッションやモデルを同期したり、簡体字中国語パックを適用したりできます。処理の進み具合も確認できます。",
+    "card5Title": "診断",
+    "card5Text": "通信状態、帯域幅、メモリ、ストレージを確認して、動作環境の問題を調べられます。",
+    "card6Title": "設定",
+    "card6Text": "5 つの表示スタイルから選び、表示言語や各スタイルの音を設定できます。",
+    "interfaceTitle": "5.0 ワークスペースを見る",
+    "interfaceLead": "画像はデモデータを使用した Maple AI 5.0 テスト版です。公開版はダウンロード欄で確認できます。",
+    "dashboardAlt": "利用状況と費用の例を表示した Maple AI ダッシュボード",
+    "pricingAlt": "Maple AI の API キーとモデル料金の画面",
+    "toolboxAlt": "同期と言語パックを操作する Maple AI ツールボックス",
+    "signal1": "macOS と Windows",
+    "signal3": "ウェブサイトは 10 言語に対応",
+    "publicLabel": "公開版",
+    "publicNotice": "画面は 5.0 テスト版です。インストーラーはここに記載の公開バージョンに対応しています。",
+    "installTitle": "Maple AI をダウンロード",
+    "installLead": "お使いの OS に対応する公開インストーラーを選択してください。",
+    "macText": "macOS 13 以降、Apple シリコンと Intel に対応。DMG を開き、アプリを「アプリケーション」に移動してください。",
+    "windowsText": "Windows 10 以降に対応。セットアップを起動して表示に従ってください。",
+    "system": "システムに合わせる",
+    "latest": "最新リリース",
+    "chooseDownload": "OS を選択",
+    "downloadMac": "macOS 版をダウンロード",
+    "downloadWindows": "Windows 版をダウンロード",
+    "verifyDownload": "ファイルの検証",
+    "verificationUnavailable": "検証情報は対応するリリースを参照",
+    "releaseNotes": "リリースノート",
+    "shareTitle": "Maple AI を共有",
+    "shareLead": "サイトのリンクをコピーするか、システムの共有機能を使ってください。",
+    "shareCTA": "サイトを共有",
+    "copyLink": "サイトリンクをコピー",
+    "copied": "リンクをコピーしました。",
+    "copyFailed": "リンクをコピーできませんでした。",
+    "shared": "共有シートを開きました。",
+    "footer": "独立開発の Codex デスクトップツール。"
+  },
+  "ko": {
+    "brandName": "MAPLE AI",
+    "seoTitle": "Maple AI | Codex 데스크톱 작업 공간",
+    "seoDescription": "macOS와 Windows용 Maple AI에서 사용량을 확인하고 API 키를 관리하며 모델 요금을 비교하고 Codex 동기화와 진단을 실행하세요.",
+    "help": "사용 안내",
+    "helpTitle": "Maple AI 사용 안내",
+    "helpLead": "Maple AI 5.0 작업 공간을 미리 살펴보세요. 설치할 수 있는 공개 버전은 다운로드 섹션에서 확인할 수 있습니다.",
+    "helpInstallTitle": "Maple AI 설치",
+    "helpWorkspaceTitle": "5.0 작업 공간 둘러보기",
+    "helpSyncText": "동기화하거나 언어 팩을 적용할 때 Codex가 닫혔다가 다시 열릴 수 있습니다. 먼저 작업을 저장하고 완료될 때까지 기다리세요.",
+    "helpStatusText": "네트워크 연결, 리소스 사용량, CC Switch, Maple AI, Node.js를 확인하세요. 환경을 변경한 뒤 다시 점검할 수 있습니다.",
+    "navHome": "홈",
+    "languageLabel": "웹사이트 언어",
+    "regionAvailability": "Maple AI는 중국 본토, 홍콩, 마카오 등의 지역에서 운영하지 않습니다.",
+    "skipContent": "본문으로 이동",
+    "eyebrow": "Codex 데스크톱 작업 공간",
+    "tagline": "사용량, 키, 도구를 한곳에서.",
+    "lead": "오늘의 토큰과 최근 비용을 확인하고 API 키와 모델 요금을 살펴보세요. 도구 상자에서 Codex를 동기화하고 실행 환경을 점검할 수 있습니다.",
+    "brandDefinition": "Maple AI는 macOS와 Windows에서 사용할 수 있는 Codex 데스크톱 도구입니다.",
+    "heroCaption": "Maple AI 5.0 작업 공간 미리보기(예시 데이터)",
+    "navOverview": "기능",
+    "navInterface": "화면",
+    "navDownloads": "다운로드",
+    "viewInterface": "작업 공간 살펴보기",
+    "featureTitle": "사용량 확인부터 문제 해결까지",
+    "featureLead": "Maple AI 5.0의 여섯 페이지에서 계정과 Codex 도구, 실행 환경을 관리할 수 있습니다.",
+    "card1Title": "대시보드",
+    "card1Text": "잔액, 오늘의 토큰과 요청 수, 최근 비용과 모델별 사용량을 확인하세요.",
+    "card2Title": "API 키와 모델 요금",
+    "card2Text": "API 키와 그룹을 관리하고 Maple AI와 OpenAI의 모델 요금을 각각 확인하세요.",
+    "card3Title": "코드 사용",
+    "card3Text": "작업 공간에서 코드를 입력하고 적용 결과와 계정 잔액을 확인하세요.",
+    "card4Title": "도구 상자",
+    "card4Text": "Codex 세션과 모델을 동기화하거나 중국어 간체 언어 팩을 적용하세요. 각 단계의 진행 상태를 확인할 수 있습니다.",
+    "card5Title": "진단",
+    "card5Text": "연결 상태, 대역폭, 메모리와 저장 공간을 확인해 실행 환경의 문제를 찾으세요.",
+    "card6Title": "설정",
+    "card6Text": "다섯 가지 화면 스타일 중에서 선택하고 표시 언어와 스타일별 소리를 설정하세요.",
+    "interfaceTitle": "5.0 작업 공간 살펴보기",
+    "interfaceLead": "스크린샷은 예시 데이터를 사용한 Maple AI 5.0 테스트 빌드입니다. 공개 버전은 다운로드에서 확인하세요.",
+    "dashboardAlt": "예시 사용량과 비용이 표시된 Maple AI 대시보드",
+    "pricingAlt": "Maple AI의 API 키와 모델 요금 페이지",
+    "toolboxAlt": "동기화와 언어 팩 도구가 표시된 Maple AI 도구 상자",
+    "signal1": "macOS 및 Windows",
+    "signal3": "10개 웹사이트 언어",
+    "publicLabel": "공개 버전",
+    "publicNotice": "작업 공간 스크린샷은 5.0 테스트 빌드입니다. 설치 파일은 여기에 표시된 공개 버전에 해당합니다.",
+    "installTitle": "Maple AI 다운로드",
+    "installLead": "사용 중인 운영 체제에 맞는 공개 설치 파일을 선택하세요.",
+    "macText": "macOS 13 이상에서 Apple Silicon과 Intel을 지원합니다. DMG를 열고 앱을 응용 프로그램 폴더로 드래그하세요.",
+    "windowsText": "Windows 10 이상에서 사용할 수 있습니다. Setup 설치 프로그램을 실행하고 안내를 따르세요.",
+    "system": "시스템 따르기",
+    "latest": "최신 릴리스",
+    "chooseDownload": "운영 체제 선택",
+    "downloadMac": "macOS용 다운로드",
+    "downloadWindows": "Windows용 다운로드",
+    "verifyDownload": "파일 검증",
+    "verificationUnavailable": "해당 릴리스에서 검증 정보 확인",
+    "releaseNotes": "릴리스 노트",
+    "shareTitle": "Maple AI 공유",
+    "shareLead": "웹사이트 링크를 복사하거나 시스템 공유를 사용하세요.",
+    "shareCTA": "웹사이트 공유",
+    "copyLink": "웹사이트 링크 복사",
+    "copied": "링크를 복사했습니다.",
+    "copyFailed": "링크를 복사하지 못했습니다.",
+    "shared": "공유 창을 열었습니다.",
+    "footer": "독립 개발 Codex 데스크톱 도구입니다."
+  },
+  "de": {
+    "brandName": "MAPLE AI",
+    "seoTitle": "Maple AI | Desktop-Arbeitsbereich für Codex",
+    "seoDescription": "In Maple AI für macOS und Windows sehen Sie die Nutzung, verwalten API-Schlüssel, vergleichen Modellpreise und nutzen Codex-Synchronisierung und Diagnose.",
+    "help": "Hilfe",
+    "helpTitle": "Benutzerhandbuch für Maple AI",
+    "helpLead": "Entdecken Sie die Vorschau auf den Arbeitsbereich von Maple AI 5.0. Im Downloadbereich finden Sie die öffentliche Version, die Sie installieren können.",
+    "helpInstallTitle": "Maple AI installieren",
+    "helpWorkspaceTitle": "Den Arbeitsbereich von 5.0 kennenlernen",
+    "helpSyncText": "Beim Synchronisieren oder Anwenden eines Sprachpakets kann Codex geschlossen und erneut geöffnet werden. Speichern Sie vorher Ihre Arbeit und warten Sie, bis der Vorgang abgeschlossen ist.",
+    "helpStatusText": "Prüfen Sie Netzwerkverbindung, Ressourcennutzung, CC Switch, Maple AI und Node.js. Wiederholen Sie die Prüfung nach Änderungen an Ihrer Umgebung.",
+    "navHome": "Startseite",
+    "languageLabel": "Sprache der Website",
+    "regionAvailability": "Maple AI ist unter anderem in Festlandchina, Hongkong und Macau nicht tätig.",
+    "skipContent": "Zum Inhalt",
+    "eyebrow": "Desktop-Arbeitsbereich für Codex",
+    "tagline": "Nutzung, Schlüssel und Werkzeuge in einem Fenster.",
+    "lead": "Sehen Sie heutige Tokens und Kosten, verwalten Sie API-Schlüssel und vergleichen Sie Modellpreise. Synchronisieren Sie Codex und prüfen Sie bei Bedarf Ihre Umgebung.",
+    "brandDefinition": "Maple AI ist ein Desktop-Begleiter für Codex unter macOS und Windows.",
+    "heroCaption": "Vorschau auf Maple AI 5.0 mit Beispieldaten",
+    "navOverview": "Funktionen",
+    "navInterface": "Oberfläche",
+    "navDownloads": "Download",
+    "viewInterface": "Arbeitsbereich ansehen",
+    "featureTitle": "Von der Nutzung bis zur Fehlerdiagnose",
+    "featureLead": "Sechs Seiten in Maple AI 5.0 decken Ihr Konto, Codex-Werkzeuge und den lokalen Systemstatus ab.",
+    "card1Title": "Übersicht",
+    "card1Text": "Kontostand, heutige Tokens und Anfragen sowie aktuelle Kosten und Nutzung nach Modell einsehen.",
+    "card2Title": "API-Schlüssel und Modellpreise",
+    "card2Text": "API-Schlüssel und Gruppen verwalten sowie Modellpreise von Maple AI und OpenAI getrennt anzeigen.",
+    "card3Title": "Code einlösen",
+    "card3Text": "Einen Gutscheincode eingeben und Ergebnis sowie Kontostand im Arbeitsbereich prüfen.",
+    "card4Title": "Werkzeugkasten",
+    "card4Text": "Codex-Sitzungen und -Modelle synchronisieren oder das Paket für vereinfachtes Chinesisch anwenden. Die Oberfläche zeigt den Fortschritt Schritt für Schritt.",
+    "card5Title": "Diagnose",
+    "card5Text": "Verbindung, Bandbreite, Arbeitsspeicher und Speicherplatz prüfen, um lokale Probleme einzugrenzen.",
+    "card6Title": "Einstellungen",
+    "card6Text": "Aus fünf Designs wählen, die Anzeigesprache festlegen und den Ton je Design einstellen.",
+    "interfaceTitle": "Ein Blick in den Arbeitsbereich 5.0",
+    "interfaceLead": "Die Bilder zeigen einen Testbuild von Maple AI 5.0 mit Beispieldaten. Die öffentliche Version steht im Downloadbereich.",
+    "dashboardAlt": "Maple-AI-Übersicht mit Beispielwerten zu Nutzung und Kosten",
+    "pricingAlt": "Seite für API-Schlüssel und Modellpreise in Maple AI",
+    "toolboxAlt": "Maple-AI-Werkzeugkasten mit Synchronisierung und Sprachpaket",
+    "signal1": "macOS und Windows",
+    "signal3": "Website in 10 Sprachen",
+    "publicLabel": "Öffentliche Version",
+    "publicNotice": "Die Bilder zeigen einen Testbuild von 5.0. Die Installationsdateien entsprechen den hier angegebenen öffentlichen Versionen.",
+    "installTitle": "Maple AI herunterladen",
+    "installLead": "Wählen Sie das veröffentlichte Installationspaket für Ihr Betriebssystem.",
+    "macText": "Für macOS 13 oder neuer auf Apple-Chips und Intel. Öffnen Sie das DMG und ziehen Sie die App in den Ordner „Programme“.",
+    "windowsText": "Für Windows 10 oder neuer. Starten Sie das Setup und folgen Sie dem Assistenten.",
+    "system": "System folgen",
+    "latest": "Neueste Version",
+    "chooseDownload": "System auswählen",
+    "downloadMac": "Für macOS laden",
+    "downloadWindows": "Für Windows laden",
+    "verifyDownload": "Datei überprüfen",
+    "verificationUnavailable": "Prüfsumme im zugehörigen Release ansehen",
+    "releaseNotes": "Versionshinweise",
+    "shareTitle": "Maple AI teilen",
+    "shareLead": "Kopieren Sie den Website-Link oder nutzen Sie die Teilen-Funktion Ihres Systems.",
+    "shareCTA": "Website teilen",
+    "copyLink": "Website-Link kopieren",
+    "copied": "Link kopiert.",
+    "copyFailed": "Link konnte nicht kopiert werden.",
+    "shared": "Teilen geöffnet.",
+    "footer": "Ein unabhängig entwickeltes Desktop-Tool für Codex."
+  },
+  "fr": {
+    "brandName": "MAPLE AI",
+    "seoTitle": "Maple AI | Espace de travail Codex sur ordinateur",
+    "seoDescription": "Suivez votre utilisation, gérez vos clés API, comparez les tarifs des modèles et accédez à la synchronisation et au diagnostic de Codex sur macOS et Windows.",
+    "help": "Guide",
+    "helpTitle": "Guide de Maple AI",
+    "helpLead": "Découvrez l’aperçu de l’espace de travail de Maple AI 5.0. La rubrique des téléchargements indique la version publique disponible à l’installation.",
+    "helpInstallTitle": "Installer Maple AI",
+    "helpWorkspaceTitle": "Découvrir l’espace de travail 5.0",
+    "helpSyncText": "La synchronisation ou l’application d’un pack de langue peut fermer puis rouvrir Codex. Enregistrez votre travail et attendez la fin de l’opération.",
+    "helpStatusText": "Vérifiez la connexion réseau, l’utilisation des ressources, CC Switch, Maple AI et Node.js. Relancez les vérifications après avoir modifié votre environnement.",
+    "navHome": "Accueil",
+    "languageLabel": "Langue du site",
+    "regionAvailability": "Maple AI n’exerce pas d’activité dans certaines régions, dont la Chine continentale, Hong Kong et Macao.",
+    "skipContent": "Aller au contenu",
+    "eyebrow": "Espace de travail Codex",
+    "tagline": "Utilisation, clés et outils dans une seule fenêtre.",
+    "lead": "Consultez les jetons du jour et les coûts récents, gérez vos clés API et comparez les tarifs des modèles. Synchronisez Codex et vérifiez l’environnement local au besoin.",
+    "brandDefinition": "Maple AI accompagne Codex sur macOS et Windows.",
+    "heroCaption": "Aperçu de Maple AI 5.0 avec données de démonstration",
+    "navOverview": "Fonctions",
+    "navInterface": "Interface",
+    "navDownloads": "Télécharger",
+    "viewInterface": "Voir l’espace de travail",
+    "featureTitle": "Du suivi de l’utilisation au diagnostic",
+    "featureLead": "Six pages dans Maple AI 5.0 regroupent votre compte, les outils Codex et l’état du système local.",
+    "card1Title": "Tableau de bord",
+    "card1Text": "Consultez le solde, les jetons et les requêtes du jour, les coûts récents et l’utilisation par modèle.",
+    "card2Title": "Clés API et tarifs des modèles",
+    "card2Text": "Gérez les clés API et leurs groupes, et consultez séparément les tarifs de Maple AI et d’OpenAI.",
+    "card3Title": "Utiliser un code",
+    "card3Text": "Saisissez un code et consultez son résultat et votre solde dans l’espace de travail.",
+    "card4Title": "Boîte à outils",
+    "card4Text": "Synchronisez les sessions et les modèles de Codex ou appliquez le pack de chinois simplifié. Suivez la progression étape par étape.",
+    "card5Title": "Diagnostic",
+    "card5Text": "Vérifiez la connexion, la bande passante, la mémoire et le stockage pour identifier les problèmes locaux.",
+    "card6Title": "Réglages",
+    "card6Text": "Choisissez parmi cinq styles et réglez la langue d’affichage ainsi que le son de chaque style.",
+    "interfaceTitle": "L’espace de travail 5.0 en images",
+    "interfaceLead": "Les captures montrent une version de test de Maple AI 5.0 avec des données de démonstration. La version publique figure dans les téléchargements.",
+    "dashboardAlt": "Tableau de bord Maple AI avec exemples d’utilisation et de coûts",
+    "pricingAlt": "Page des clés API et des tarifs dans Maple AI",
+    "toolboxAlt": "Boîte à outils Maple AI avec synchronisation et pack de langue",
+    "signal1": "macOS et Windows",
+    "signal3": "Site en 10 langues",
+    "publicLabel": "Version publique",
+    "publicNotice": "Les captures montrent une version de test de la 5.0. Les installateurs correspondent aux versions publiques indiquées ici.",
+    "installTitle": "Télécharger Maple AI",
+    "installLead": "Choisissez l’installateur publié pour votre système.",
+    "macText": "Pour macOS 13 ou ultérieur, sur puce Apple ou Intel. Ouvrez le DMG puis faites glisser l’application dans Applications.",
+    "windowsText": "Pour Windows 10 ou ultérieur. Lancez l’installateur Setup et suivez les étapes.",
+    "system": "Suivre le système",
+    "latest": "Dernière version",
+    "chooseDownload": "Choisir le système",
+    "downloadMac": "Télécharger pour macOS",
+    "downloadWindows": "Télécharger pour Windows",
+    "verifyDownload": "Vérifier le fichier",
+    "verificationUnavailable": "Consultez la version correspondante",
+    "releaseNotes": "Notes de version",
+    "shareTitle": "Partager Maple AI",
+    "shareLead": "Copiez le lien ou utilisez le partage système.",
+    "shareCTA": "Partager le site",
+    "copyLink": "Copier le lien du site",
+    "copied": "Lien copié.",
+    "copyFailed": "Impossible de copier le lien.",
+    "shared": "Partage ouvert.",
+    "footer": "Un outil de bureau indépendant pour Codex."
+  },
+  "es": {
+    "brandName": "MAPLE AI",
+    "seoTitle": "Maple AI | Espacio de trabajo de escritorio para Codex",
+    "seoDescription": "Consulta el uso, gestiona claves API, compara las tarifas de modelos y usa la sincronización y el diagnóstico de Codex en macOS y Windows.",
+    "help": "Ayuda",
+    "helpTitle": "Guía de Maple AI",
+    "helpLead": "Explora la vista previa del espacio de trabajo de Maple AI 5.0. En la sección de descargas se indica la versión pública disponible para instalar.",
+    "helpInstallTitle": "Instalar Maple AI",
+    "helpWorkspaceTitle": "Explorar el espacio de trabajo 5.0",
+    "helpSyncText": "La sincronización o la aplicación de un paquete de idioma puede cerrar y volver a abrir Codex. Guarda el trabajo antes de continuar y espera a que termine la operación.",
+    "helpStatusText": "Comprueba la conexión de red, el uso de recursos, CC Switch, Maple AI y Node.js. Repite las comprobaciones después de modificar el entorno.",
+    "navHome": "Inicio",
+    "languageLabel": "Idioma del sitio",
+    "regionAvailability": "Maple AI no opera en regiones como China continental, Hong Kong y Macao.",
+    "skipContent": "Ir al contenido",
+    "eyebrow": "Espacio de trabajo para Codex",
+    "tagline": "Uso, claves y herramientas en un solo espacio.",
+    "lead": "Consulta los tokens de hoy y los costes recientes, gestiona claves API y compara tarifas. Sincroniza Codex y comprueba el entorno local cuando lo necesites.",
+    "brandDefinition": "Maple AI es una herramienta de escritorio para Codex en macOS y Windows.",
+    "heroCaption": "Vista previa de Maple AI 5.0 con datos de ejemplo",
+    "navOverview": "Funciones",
+    "navInterface": "Interfaz",
+    "navDownloads": "Descargar",
+    "viewInterface": "Ver el espacio de trabajo",
+    "featureTitle": "Del seguimiento del uso al diagnóstico",
+    "featureLead": "Seis páginas de Maple AI 5.0 reúnen tu cuenta, las herramientas de Codex y el estado del equipo.",
+    "card1Title": "Panel",
+    "card1Text": "Consulta el saldo, los tokens y las solicitudes de hoy, los costes recientes y el uso por modelo.",
+    "card2Title": "Claves API y tarifas de modelos",
+    "card2Text": "Gestiona las claves API y sus grupos, y consulta por separado las tarifas de Maple AI y OpenAI.",
+    "card3Title": "Canjear códigos",
+    "card3Text": "Introduce un código y revisa el resultado y el saldo en el espacio de trabajo.",
+    "card4Title": "Herramientas",
+    "card4Text": "Sincroniza sesiones y modelos de Codex o aplica el paquete de chino simplificado. Sigue el progreso de cada paso.",
+    "card5Title": "Diagnóstico",
+    "card5Text": "Comprueba la conectividad, el ancho de banda, la memoria y el almacenamiento para detectar problemas locales.",
+    "card6Title": "Ajustes",
+    "card6Text": "Elige entre cinco estilos y configura el idioma de la interfaz y el sonido de cada estilo.",
+    "interfaceTitle": "Así es el espacio de trabajo 5.0",
+    "interfaceLead": "Las capturas muestran una versión de prueba de Maple AI 5.0 con datos de ejemplo. Consulta la versión pública en Descargas.",
+    "dashboardAlt": "Panel de Maple AI con ejemplos de uso y costes",
+    "pricingAlt": "Página de claves API y tarifas de Maple AI",
+    "toolboxAlt": "Herramientas de Maple AI con sincronización y paquete de idioma",
+    "signal1": "macOS y Windows",
+    "signal3": "Sitio en 10 idiomas",
+    "publicLabel": "Versión pública",
+    "publicNotice": "Las capturas muestran una versión de prueba de la 5.0. Los instaladores corresponden a las versiones públicas indicadas aquí.",
+    "installTitle": "Descargar Maple AI",
+    "installLead": "Elige el instalador publicado para tu sistema operativo.",
+    "macText": "Para macOS 13 o posterior en chips Apple e Intel. Abre el DMG y arrastra la aplicación a Aplicaciones.",
+    "windowsText": "Para Windows 10 o posterior. Ejecuta el instalador Setup y sigue las instrucciones.",
+    "system": "Seguir sistema",
+    "latest": "Última versión",
+    "chooseDownload": "Elegir sistema",
+    "downloadMac": "Descargar para macOS",
+    "downloadWindows": "Descargar para Windows",
+    "verifyDownload": "Verificar archivo",
+    "verificationUnavailable": "Consulta la versión correspondiente",
+    "releaseNotes": "Notas de versión",
+    "shareTitle": "Compartir Maple AI",
+    "shareLead": "Copia el enlace o usa la opción de compartir del sistema.",
+    "shareCTA": "Compartir web",
+    "copyLink": "Copiar enlace del sitio",
+    "copied": "Enlace copiado.",
+    "copyFailed": "No se pudo copiar el enlace.",
+    "shared": "Panel de compartir abierto.",
+    "footer": "Una herramienta de escritorio independiente para Codex."
+  },
+  "pt": {
+    "brandName": "MAPLE AI",
+    "seoTitle": "Maple AI | Espaço de trabalho desktop para Codex",
+    "seoDescription": "Acompanhe o uso, gerencie chaves de API, compare tarifas de modelos e use a sincronização e o diagnóstico do Codex no macOS e no Windows.",
+    "help": "Ajuda",
+    "helpTitle": "Guia do Maple AI",
+    "helpLead": "Confira a prévia do espaço de trabalho do Maple AI 5.0. A seção de downloads indica a versão pública disponível para instalação.",
+    "helpInstallTitle": "Instalar o Maple AI",
+    "helpWorkspaceTitle": "Conhecer o espaço de trabalho 5.0",
+    "helpSyncText": "A sincronização ou a aplicação de um pacote de idioma pode fechar e reabrir o Codex. Salve o trabalho antes de continuar e aguarde até a operação terminar.",
+    "helpStatusText": "Verifique a conexão de rede, o uso de recursos, o CC Switch, o Maple AI e o Node.js. Repita as verificações após alterar o ambiente.",
+    "navHome": "Início",
+    "languageLabel": "Idioma do site",
+    "regionAvailability": "Maple AI não opera em regiões como a China continental, Hong Kong e Macau.",
+    "skipContent": "Ir para o conteúdo",
+    "eyebrow": "Espaço de trabalho para Codex",
+    "tagline": "Uso, chaves e ferramentas em um só lugar.",
+    "lead": "Consulte os tokens de hoje e os custos recentes, gerencie chaves de API e compare tarifas. Sincronize o Codex e verifique o ambiente local quando precisar.",
+    "brandDefinition": "Maple AI é uma ferramenta desktop para Codex no macOS e no Windows.",
+    "heroCaption": "Prévia do Maple AI 5.0 com dados de demonstração",
+    "navOverview": "Recursos",
+    "navInterface": "Interface",
+    "navDownloads": "Baixar",
+    "viewInterface": "Ver o espaço de trabalho",
+    "featureTitle": "Do acompanhamento do uso ao diagnóstico",
+    "featureLead": "Seis páginas do Maple AI 5.0 reúnem a conta, as ferramentas do Codex e o estado do sistema.",
+    "card1Title": "Painel",
+    "card1Text": "Consulte o saldo, os tokens e as solicitações de hoje, os custos recentes e o uso por modelo.",
+    "card2Title": "Chaves de API e tarifas de modelos",
+    "card2Text": "Gerencie chaves de API e seus grupos, e consulte separadamente as tarifas do Maple AI e da OpenAI.",
+    "card3Title": "Resgate de código",
+    "card3Text": "Informe o código e confira o resultado e o saldo no espaço de trabalho.",
+    "card4Title": "Caixa de ferramentas",
+    "card4Text": "Sincronize sessões e modelos do Codex ou aplique o pacote de chinês simplificado. Acompanhe o progresso de cada etapa.",
+    "card5Title": "Diagnóstico",
+    "card5Text": "Verifique conexão, largura de banda, memória e armazenamento para localizar problemas no ambiente.",
+    "card6Title": "Configurações",
+    "card6Text": "Escolha entre cinco estilos e configure o idioma da interface e o som de cada estilo.",
+    "interfaceTitle": "Por dentro do espaço de trabalho 5.0",
+    "interfaceLead": "As capturas mostram uma versão de teste do Maple AI 5.0 com dados de demonstração. A versão pública está na seção de downloads.",
+    "dashboardAlt": "Painel do Maple AI com exemplos de uso e custos",
+    "pricingAlt": "Página de chaves de API e tarifas do Maple AI",
+    "toolboxAlt": "Caixa de ferramentas do Maple AI com sincronização e pacote de idioma",
+    "signal1": "macOS e Windows",
+    "signal3": "Site em 10 idiomas",
+    "publicLabel": "Versão pública",
+    "publicNotice": "As capturas mostram uma versão de teste da 5.0. Os instaladores correspondem às versões públicas indicadas aqui.",
+    "installTitle": "Baixar Maple AI",
+    "installLead": "Escolha o instalador publicado para o seu sistema.",
+    "macText": "Para macOS 13 ou posterior, com chips Apple ou Intel. Abra o DMG e arraste o app para Aplicativos.",
+    "windowsText": "Para Windows 10 ou posterior. Execute o instalador Setup e siga as instruções.",
+    "system": "Seguir sistema",
+    "latest": "Versão mais recente",
+    "chooseDownload": "Escolher sistema",
+    "downloadMac": "Baixar para macOS",
+    "downloadWindows": "Baixar para Windows",
+    "verifyDownload": "Verificar arquivo",
+    "verificationUnavailable": "Consulte a versão correspondente",
+    "releaseNotes": "Notas da versão",
+    "shareTitle": "Compartilhar o Maple AI",
+    "shareLead": "Copie o link ou use o compartilhamento do sistema.",
+    "shareCTA": "Compartilhar site",
+    "copyLink": "Copiar link do site",
+    "copied": "Link copiado.",
+    "copyFailed": "Não foi possível copiar o link.",
+    "shared": "Compartilhamento aberto.",
+    "footer": "Uma ferramenta desktop independente para Codex."
+  },
+  "ru": {
+    "brandName": "MAPLE AI",
+    "seoTitle": "Maple AI | Рабочее пространство Codex для компьютера",
+    "seoDescription": "Отслеживайте использование, управляйте ключами API, сравнивайте тарифы моделей, синхронизируйте Codex и проверяйте настройки среды в Maple AI для macOS и Windows.",
+    "help": "Руководство",
+    "helpTitle": "Руководство по Maple AI",
+    "helpLead": "Посмотрите, как устроено рабочее пространство Maple AI 5.0. Доступная для установки публичная версия указана в разделе загрузок.",
+    "helpInstallTitle": "Установка Maple AI",
+    "helpWorkspaceTitle": "Рабочее пространство 5.0",
+    "helpSyncText": "При синхронизации или применении языкового пакета Codex может закрыться и открыться снова. Сначала сохраните работу и дождитесь завершения операции.",
+    "helpStatusText": "Проверьте подключение к сети, использование ресурсов, CC Switch, Maple AI и Node.js. После изменения настроек запустите проверку снова.",
+    "navHome": "Главная",
+    "languageLabel": "Язык сайта",
+    "regionAvailability": "Maple AI не ведёт деятельность в материковом Китае, Гонконге, Макао и ряде других регионов.",
+    "skipContent": "Перейти к содержанию",
+    "eyebrow": "Рабочее пространство Codex для компьютера",
+    "tagline": "Использование, ключи и инструменты в одном рабочем пространстве.",
+    "lead": "Смотрите расход токенов за сегодня и недавние затраты, управляйте ключами API и сравнивайте тарифы моделей. При необходимости синхронизируйте Codex и проверьте локальную среду.",
+    "brandDefinition": "Maple AI — приложение для работы с Codex на macOS и Windows.",
+    "heroCaption": "Предварительный просмотр Maple AI 5.0 с демонстрационными данными",
+    "navOverview": "Возможности",
+    "navInterface": "Интерфейс",
+    "navDownloads": "Загрузки",
+    "viewInterface": "Посмотреть рабочее пространство",
+    "featureTitle": "От статистики до диагностики",
+    "featureLead": "Шесть страниц Maple AI 5.0 объединяют сведения об аккаунте, инструменты Codex и состояние локальной среды.",
+    "card1Title": "Панель управления",
+    "card1Text": "Смотрите баланс, расход токенов и число запросов за сегодня, недавние затраты и использование по моделям.",
+    "card2Title": "Ключи API и тарифы моделей",
+    "card2Text": "Управляйте ключами API и их группами. Тарифы моделей Maple AI и OpenAI можно просматривать отдельно.",
+    "card3Title": "Активация кода",
+    "card3Text": "Введите код активации и проверьте результат и баланс в рабочем пространстве.",
+    "card4Title": "Инструменты",
+    "card4Text": "Синхронизируйте сеансы и модели Codex или применяйте пакет упрощённого китайского языка. Приложение показывает ход операции.",
+    "card5Title": "Диагностика",
+    "card5Text": "Проверьте подключение к сети, пропускную способность, память и хранилище, чтобы найти причину неполадок.",
+    "card6Title": "Настройки",
+    "card6Text": "Выберите один из пяти стилей, настройте язык интерфейса и звук для каждого стиля.",
+    "interfaceTitle": "Рабочее пространство 5.0 изнутри",
+    "interfaceLead": "На снимках — тестовая сборка Maple AI 5.0 с демонстрационными данными. Публичная версия указана в разделе загрузок.",
+    "dashboardAlt": "Панель управления Maple AI с демонстрационными данными об использовании и затратах",
+    "pricingAlt": "Страница ключей API и тарифов моделей в Maple AI",
+    "toolboxAlt": "Инструменты синхронизации и языковой пакет в Maple AI",
+    "signal1": "macOS и Windows",
+    "signal3": "Сайт на 10 языках",
+    "publicLabel": "Публичная версия",
+    "publicNotice": "На снимках рабочего пространства показана тестовая сборка 5.0. Установщики соответствуют указанным здесь публичным версиям.",
+    "installTitle": "Скачать Maple AI",
+    "installLead": "Выберите опубликованный установщик для вашей операционной системы.",
+    "macText": "Для macOS 13 и новее на Apple silicon и Intel. Откройте DMG и перетащите приложение в папку «Программы».",
+    "windowsText": "Для Windows 10 и новее. Запустите установщик Setup и следуйте его указаниям.",
+    "system": "Как в системе",
+    "latest": "Последняя версия",
+    "chooseDownload": "Выбрать систему",
+    "downloadMac": "Скачать для macOS",
+    "downloadWindows": "Скачать для Windows",
+    "verifyDownload": "Проверка файла",
+    "verificationUnavailable": "Сведения о проверке см. в соответствующем выпуске",
+    "releaseNotes": "Примечания к выпуску",
+    "shareTitle": "Поделиться Maple AI",
+    "shareLead": "Скопируйте ссылку на сайт или воспользуйтесь системным меню «Поделиться».",
+    "shareCTA": "Поделиться сайтом",
+    "copyLink": "Скопировать ссылку на сайт",
+    "copied": "Ссылка скопирована.",
+    "copyFailed": "Не удалось скопировать ссылку.",
+    "shared": "Меню «Поделиться» открыто.",
+    "footer": "Независимое настольное приложение для Codex."
+  },
+  "it": {
+    "brandName": "MAPLE AI",
+    "seoTitle": "Maple AI | Area di lavoro desktop per Codex",
+    "seoDescription": "Monitora l’utilizzo, gestisci le chiavi API, confronta le tariffe dei modelli e usa sincronizzazione e diagnostica di Codex su macOS e Windows.",
+    "help": "Guida",
+    "helpTitle": "Guida di Maple AI",
+    "helpLead": "Scopri l’anteprima dell’area di lavoro di Maple AI 5.0. Nella sezione Download trovi la versione pubblica disponibile per l’installazione.",
+    "helpInstallTitle": "Installare Maple AI",
+    "helpWorkspaceTitle": "Scoprire l’area di lavoro 5.0",
+    "helpSyncText": "La sincronizzazione o l’applicazione di un pacchetto lingua può chiudere e riaprire Codex. Salva prima il tuo lavoro e attendi il completamento dell’operazione.",
+    "helpStatusText": "Controlla la connessione di rete, l’uso delle risorse, CC Switch, Maple AI e Node.js. Ripeti i controlli dopo ogni modifica all’ambiente.",
+    "navHome": "Home",
+    "languageLabel": "Lingua del sito",
+    "regionAvailability": "Maple AI non opera in regioni come la Cina continentale, Hong Kong e Macao.",
+    "skipContent": "Vai al contenuto",
+    "eyebrow": "Area di lavoro per Codex",
+    "tagline": "Utilizzo, chiavi e strumenti in un’unica finestra.",
+    "lead": "Controlla i token di oggi e i costi recenti, gestisci le chiavi API e confronta le tariffe. Sincronizza Codex e verifica l’ambiente locale quando serve.",
+    "brandDefinition": "Maple AI è uno strumento desktop per Codex su macOS e Windows.",
+    "heroCaption": "Anteprima di Maple AI 5.0 con dati dimostrativi",
+    "navOverview": "Funzioni",
+    "navInterface": "Interfaccia",
+    "navDownloads": "Scarica",
+    "viewInterface": "Scopri l’area di lavoro",
+    "featureTitle": "Dall’utilizzo alla risoluzione dei problemi",
+    "featureLead": "Sei pagine in Maple AI 5.0 riuniscono account, strumenti Codex e stato del sistema locale.",
+    "card1Title": "Dashboard",
+    "card1Text": "Controlla saldo, token e richieste di oggi, costi recenti e utilizzo per modello.",
+    "card2Title": "Chiavi API e tariffe dei modelli",
+    "card2Text": "Gestisci le chiavi API e i relativi gruppi, e consulta separatamente le tariffe di Maple AI e OpenAI.",
+    "card3Title": "Riscatta un codice",
+    "card3Text": "Inserisci un codice e controlla il risultato e il saldo nell’area di lavoro.",
+    "card4Title": "Strumenti",
+    "card4Text": "Sincronizza sessioni e modelli di Codex o applica il pacchetto di cinese semplificato. Segui lo stato di ogni passaggio.",
+    "card5Title": "Diagnostica",
+    "card5Text": "Controlla connessione, banda, memoria e spazio di archiviazione per individuare problemi locali.",
+    "card6Title": "Impostazioni",
+    "card6Text": "Scegli tra cinque stili e imposta la lingua dell’interfaccia e i suoni di ogni stile.",
+    "interfaceTitle": "Uno sguardo all’area di lavoro 5.0",
+    "interfaceLead": "Le immagini mostrano una build di prova di Maple AI 5.0 con dati dimostrativi. La versione pubblica è nella sezione Download.",
+    "dashboardAlt": "Dashboard Maple AI con dati dimostrativi su utilizzo e costi",
+    "pricingAlt": "Pagina delle chiavi API e delle tariffe in Maple AI",
+    "toolboxAlt": "Strumenti Maple AI per sincronizzazione e pacchetto lingua",
+    "signal1": "macOS e Windows",
+    "signal3": "Sito in 10 lingue",
+    "publicLabel": "Versione pubblica",
+    "publicNotice": "Le immagini mostrano una build di prova della 5.0. Gli installer corrispondono alle versioni pubbliche indicate qui.",
+    "installTitle": "Scarica Maple AI",
+    "installLead": "Scegli l’installer pubblicato per il tuo sistema operativo.",
+    "macText": "Per macOS 13 o successivo con chip Apple o Intel. Apri il DMG e trascina l’app in Applicazioni.",
+    "windowsText": "Per Windows 10 o successivo. Avvia l’installer Setup e segui le istruzioni.",
+    "system": "Segui sistema",
+    "latest": "Ultima versione",
+    "chooseDownload": "Scegli il sistema",
+    "downloadMac": "Scarica per macOS",
+    "downloadWindows": "Scarica per Windows",
+    "verifyDownload": "Verifica file",
+    "verificationUnavailable": "Consulta la versione corrispondente",
+    "releaseNotes": "Note di versione",
+    "shareTitle": "Condividi Maple AI",
+    "shareLead": "Copia il link o usa la condivisione di sistema.",
+    "shareCTA": "Condividi sito",
+    "copyLink": "Copia link del sito",
+    "copied": "Link copiato.",
+    "copyFailed": "Impossibile copiare il link.",
+    "shared": "Condivisione aperta.",
+    "footer": "Uno strumento desktop indipendente per Codex."
+  }
+};
+const languagePreferenceKey = "maple-ai-website-language";
+const languageSelect = document.getElementById("languageSelect");
+let activeLanguage = "en";
+
+function languageCode(locale) {
+  return typeof locale === "string" ? locale.trim().toLowerCase().split(/[-_]/)[0] : "";
+}
+
+function supportedChoice(value) {
+  if (value === "system") return value;
+  const code = languageCode(value);
+  return Object.hasOwn(translations, code) ? code : null;
+}
+
+function systemLanguage() {
+  const locales = navigator.languages?.length ? navigator.languages : [navigator.language];
+  return locales.map(languageCode).find((code) => Object.hasOwn(translations, code)) || "en";
+}
+
+function dict() { return translations[activeLanguage]; }
+
+function applyLanguage(value) {
+  const choice = supportedChoice(value) || "system";
+  activeLanguage = choice === "system" ? systemLanguage() : choice;
+  const copy = dict();
+  document.documentElement.lang = activeLanguage === "zh" ? "zh-CN" : activeLanguage;
+  document.querySelectorAll("[data-i18n]").forEach((node) => { node.textContent = copy[node.dataset.i18n]; });
+  document.querySelectorAll("[data-i18n-alt]").forEach((image) => { image.alt = copy[image.dataset.i18nAlt]; });
+  languageSelect.value = choice;
+  languageSelect.options[0].textContent = copy.system;
+  languageSelect.setAttribute("aria-label", copy.languageLabel);
+  onLanguageChanged(copy);
+}
+
+function chooseLanguage(value) {
+  const choice = supportedChoice(value) || "system";
+  try { localStorage.setItem(languagePreferenceKey, choice); } catch (_) {}
+  applyLanguage(choice);
+}
+
+function startWebsiteLanguage() {
+  const url = new URL(location.href);
+  const requested = supportedChoice(url.searchParams.get("lang"));
+  if (requested) {
+    chooseLanguage(requested);
+    url.searchParams.delete("lang");
+    globalThis.history?.replaceState(null, "", url.pathname + url.search + url.hash);
+  } else {
+    let saved = null;
+    try { saved = localStorage.getItem(languagePreferenceKey); } catch (_) {}
+    applyLanguage(saved);
+  }
+  languageSelect.addEventListener("change", (event) => chooseLanguage(event.target.value));
+  globalThis.addEventListener?.("languagechange", () => {
+    if (languageSelect.value === "system") applyLanguage("system");
+  });
+}
+    function updateMetadata(copy) {
+      const canonical = "https://codex.maple.xin/help/";
+      const title = copy.helpTitle;
+      const description = copy.helpLead;
+      document.title = title;
+      const set = (id, attribute, value) => document.getElementById(id)?.setAttribute(attribute, value);
+      set("pageDescription", "content", description);
+      set("canonicalLink", "href", canonical);
+      set("ogTitle", "content", title);
+      set("ogDescription", "content", description);
+      set("ogUrl", "content", canonical);
+      const locales = { zh: "zh_CN", en: "en_US", ja: "ja_JP", ko: "ko_KR", de: "de_DE", fr: "fr_FR", es: "es_ES", pt: "pt_PT", ru: "ru_RU", it: "it_IT" };
+      set("ogLocale", "content", locales[activeLanguage]);
+      set("twitterTitle", "content", title);
+      set("twitterDescription", "content", description);
+      const schema = document.getElementById("pageMetadata");
+      if (schema) {
+        const data = JSON.parse(schema.textContent);
+        data.description = description;
+        data.inLanguage = document.documentElement.lang;
+        data.url = canonical;
+        schema.textContent = JSON.stringify(data);
+      }
+    }
+    function onLanguageChanged(copy) { updateMetadata(copy); }
+    startWebsiteLanguage();
+</script>
+</body></html>
