@@ -17,6 +17,12 @@ on:
         type: boolean
         default: false
 
+      trial_only:
+        description: Build a separately named manual-test installer
+        required: false
+        type: boolean
+        default: false
+
 permissions:
   contents: read
 
@@ -40,6 +46,7 @@ jobs:
       REQUESTED_SOURCE_SHA: ${{ inputs.source_sha }}
       REQUESTED_VERSION: ${{ inputs.version }}
       QUOTA_PREVIEW_ONLY: ${{ inputs.preview_only }}
+      QUOTA_TRIAL_ONLY: ${{ inputs.trial_only }}
       QUOTA_LOG_PUBLIC_KEY_B64: ${{ vars.QUOTA_LOG_PUBLIC_KEY_B64 }}
     steps:
       - name: Validate maintenance request
@@ -51,6 +58,9 @@ jobs:
           }
           if ($env:REQUESTED_VERSION -notmatch '^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$') {
             throw 'A complete product version is required.'
+          }
+          if ($env:QUOTA_PREVIEW_ONLY -eq 'true' -and $env:QUOTA_TRIAL_ONLY -eq 'true') {
+            throw 'Choose a trial installer or offline previews.'
           }
           if ([string]::IsNullOrWhiteSpace($env:QUOTA_LOG_PUBLIC_KEY_B64)) {
             throw 'Private diagnostic encryption must be configured before building.'
@@ -91,13 +101,19 @@ jobs:
         working-directory: source
         run: |
           $ErrorActionPreference = 'Stop'
-          & ./scripts/validate-windows-release.ps1 -Version $env:REQUESTED_VERSION -PrivateLogs -PreviewOnly:($env:QUOTA_PREVIEW_ONLY -eq 'true')
+          $parameters = @{
+            Version = $env:REQUESTED_VERSION
+            PrivateLogs = $true
+            PreviewOnly = ($env:QUOTA_PREVIEW_ONLY -eq 'true')
+          }
+          if ($env:QUOTA_TRIAL_ONLY -eq 'true') { $parameters.TrialOnly = $true }
+          & ./scripts/validate-windows-release.ps1 @parameters
           if ($LASTEXITCODE -ne 0) {
             throw 'Windows validation failed. Consult the encrypted diagnostic artifact.'
           }
 
       - name: Upload only validated public product files
-        if: success() && !inputs.preview_only
+        if: success() && !inputs.preview_only && !inputs.trial_only
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: quota-product-windows-${{ inputs.version }}-${{ inputs.source_sha }}
@@ -112,6 +128,18 @@ jobs:
             source/acceptance-results/windows-ci/other-dark.png
             source/acceptance-results/windows-ci/maple-light.png
             source/acceptance-results/windows-ci/manifest.json
+
+      - name: Upload a separately named manual-test installer
+        if: success() && inputs.trial_only
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: quota-product-windows-trial-${{ inputs.version }}-${{ inputs.source_sha }}
+          retention-days: 3
+          if-no-files-found: error
+          include-hidden-files: false
+          path: |
+            source/dist/windows-trial/*-Windows-Trial-Setup.exe
+            source/acceptance-results/windows-trial/manifest.json
 
       - name: Upload offline previews only
         if: success() && inputs.preview_only
@@ -136,4 +164,6 @@ jobs:
           retention-days: 3
           if-no-files-found: warn
           include-hidden-files: false
-          path: source/acceptance-results/windows-ci/private-logs.enc.json
+          path: |
+            source/acceptance-results/windows-ci/private-logs.enc.json
+            source/acceptance-results/windows-trial/private-logs.enc.json
